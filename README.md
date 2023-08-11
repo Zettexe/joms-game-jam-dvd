@@ -1,1 +1,1 @@
-# joms-game-jam-dvd
+# Game Jam DVD
