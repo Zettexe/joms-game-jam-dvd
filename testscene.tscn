@@ -1,0 +1,235 @@
+[gd_scene load_steps=17 format=3 uid="uid://brgrsysnaaia8"]
+
+[ext_resource type="Script" path="res://MoveCamera.gd" id="1_krewk"]
+[ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://icon.svg" id="1_qrxup"]
+[ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://placeholder.png" id="2_ipej5"]
+[ext_resource type="Script" path="res://Player.gd" id="3_tpo6f"]
+[ext_resource type="Script" path="res://NegotiatorDebug.gd" id="5_2mun6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hh00"]
+size = Vector2(120, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqdc0"]
+size = Vector2(1440, 70)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ugtui"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uxpii"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iqt8x"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vwj7x"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpehq"]
+radius = 64.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cmwi"]
+size = Vector2(534, 245)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qid7x"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgx8n"]
+radius = 128.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 2130
+position_smoothing_speed = 7.0
+editor_draw_limits = true
+script = ExtResource("1_krewk")
+
+[node name="Rooms" type="StaticBody2D" parent="."]
+
+[node name="Kitchen" type="Node2D" parent="Rooms"]
+
+[node name="KitchenArea" type="Area2D" parent="Rooms/Kitchen"]
+position = Vector2(960, 540)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Kitchen/KitchenArea"]
+scale = Vector2(91, 49)
+shape = SubResource("RectangleShape2D_qtc5e")
+
+[node name="WallTop" type="Sprite2D" parent="Rooms/Kitchen"]
+modulate = Color(0.596078, 0.596078, 0.596078, 1)
+scale = Vector2(960, 540)
+texture = ExtResource("2_ipej5")
+centered = false
+
+[node name="Shadow" type="Sprite2D" parent="Rooms/Kitchen"]
+modulate = Color(0.529412, 0.529412, 0.529412, 1)
+position = Vector2(30, 30)
+scale = Vector2(930, 510)
+texture = ExtResource("2_ipej5")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(50, 50)
+scale = Vector2(910, 490)
+texture = ExtResource("2_ipej5")
+centered = false
+
+[node name="Other" type="Node2D" parent="Rooms"]
+position = Vector2(0, 1050)
+
+[node name="OtherArea" type="Area2D" parent="Rooms/Other"]
+position = Vector2(960, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Other/OtherArea"]
+scale = Vector2(91, 49)
+shape = SubResource("RectangleShape2D_qtc5e")
+
+[node name="WallTop" type="Sprite2D" parent="Rooms/Other"]
+modulate = Color(0.596078, 0.596078, 0.596078, 1)
+scale = Vector2(960, 540)
+texture = ExtResource("2_ipej5")
+centered = false
+
+[node name="Shadow" type="Sprite2D" parent="Rooms/Other"]
+modulate = Color(0.529412, 0.529412, 0.529412, 1)
+position = Vector2(30, 30)
+scale = Vector2(930, 510)
+texture = ExtResource("2_ipej5")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="Rooms/Other"]
+position = Vector2(50, 50)
+scale = Vector2(910, 490)
+texture = ExtResource("2_ipej5")
+centered = false
+
+[node name="Door" type="Node2D" parent="Rooms"]
+position = Vector2(300, 1065)
+
+[node name="Shadow" type="Sprite2D" parent="Rooms/Door"]
+modulate = Color(0.529412, 0.529412, 0.529412, 1)
+scale = Vector2(150, 35)
+texture = ExtResource("2_ipej5")
+
+[node name="Floor" type="Sprite2D" parent="Rooms/Door"]
+scale = Vector2(130, 35)
+texture = ExtResource("2_ipej5")
+
+[node name="LeftDoorCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(110, 1065)
+shape = SubResource("RectangleShape2D_3hh00")
+
+[node name="RightDoorCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1150, 1065)
+shape = SubResource("RectangleShape2D_dqdc0")
+
+[node name="TopWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(960, 50)
+shape = SubResource("WorldBoundaryShape2D_ugtui")
+
+[node name="BottomWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(960, 2080)
+shape = SubResource("WorldBoundaryShape2D_uxpii")
+
+[node name="LeftWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(50, 1065)
+shape = SubResource("WorldBoundaryShape2D_iqt8x")
+
+[node name="RightWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1870, 1065)
+shape = SubResource("WorldBoundaryShape2D_vwj7x")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(960, 540)
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("3_tpo6f")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_mpehq")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_qrxup")
+
+[node name="Table" type="StaticBody2D" parent="."]
+position = Vector2(1023, 1467)
+
+[node name="Sprite2D" type="Sprite2D" parent="Table"]
+modulate = Color(0.529412, 0.321569, 0.156863, 1)
+position = Vector2(266, 122)
+scale = Vector2(267, 123)
+texture = ExtResource("2_ipej5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+position = Vector2(266, 121.5)
+shape = SubResource("RectangleShape2D_2cmwi")
+
+[node name="TestNegotiator" type="StaticBody2D" parent="."]
+position = Vector2(1093, 1377)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator"]
+texture = ExtResource("1_qrxup")
+script = ExtResource("5_2mun6")
+
+[node name="DialogueArea" type="Area2D" parent="TestNegotiator"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestNegotiator2" type="StaticBody2D" parent="."]
+position = Vector2(1268, 1375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator2"]
+texture = ExtResource("1_qrxup")
+script = ExtResource("5_2mun6")
+
+[node name="DialogueArea" type="Area2D" parent="TestNegotiator2"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestNegotiator3" type="StaticBody2D" parent="."]
+position = Vector2(1462, 1373)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator3"]
+texture = ExtResource("1_qrxup")
+script = ExtResource("5_2mun6")
+
+[node name="DialogueArea" type="Area2D" parent="TestNegotiator3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[connection signal="area_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
+[connection signal="body_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
+[connection signal="area_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
+[connection signal="body_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
+[connection signal="body_entered" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestNegotiator2/DialogueArea" to="TestNegotiator2/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestNegotiator2/DialogueArea" to="TestNegotiator2/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestNegotiator3/DialogueArea" to="TestNegotiator3/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestNegotiator3/DialogueArea" to="TestNegotiator3/Sprite2D" method="_on_dialogue_area_body_exited"]
