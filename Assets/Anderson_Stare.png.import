@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfo28cncl8yb"
-path="res://.godot/imported/fanderson_stare.png-2387a268a7fb959c61568d90050d2dd7.ctex"
+uid="uid://v05tlkiek7p6"
+path="res://.godot/imported/Anderson_Stare.png-c4c92579ae1a7cde66b47771c046d787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fanderson_stare.png"
-dest_files=["res://.godot/imported/fanderson_stare.png-2387a268a7fb959c61568d90050d2dd7.ctex"]
+source_file="res://Assets/Anderson_Stare.png"
+dest_files=["res://.godot/imported/Anderson_Stare.png-c4c92579ae1a7cde66b47771c046d787.ctex"]
 
 [params]
 
