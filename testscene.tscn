@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cxbuu8p5gr4q7"]
+[gd_scene load_steps=21 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://MoveCamera.gd" id="1_krewk"]
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://icon.svg" id="1_qrxup"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Player.gd" id="3_tpo6f"]
 [ext_resource type="Script" path="res://NegotiatorDebug.gd" id="5_2mun6"]
 [ext_resource type="Script" path="res://FridgeDebug.gd" id="6_od7a5"]
-[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://1580893542chef-hat-freesvg.org.svg" id="7_j6bsp"]
+[ext_resource type="Texture2D" path="res://1580893542chef-hat-freesvg.org.svg" id="7_j6bsp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
@@ -39,8 +39,11 @@ radius = 64.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgx8n"]
 radius = 128.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tjyik"]
-radius = 150.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcwyc"]
+size = Vector2(182, 186)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x38ga"]
+radius = 94.0053
 
 [node name="Node2D" type="Node2D"]
 
@@ -267,29 +270,24 @@ position = Vector2(266, 121.5)
 shape = SubResource("RectangleShape2D_2cmwi")
 
 [node name="Couldron" type="StaticBody2D" parent="."]
-position = Vector2(170, 256)
-rotation = -1.5708
-scale = Vector2(0.4, 0.925)
+position = Vector2(285, 141)
 
 [node name="Sprite2D" type="Sprite2D" parent="Couldron"]
 modulate = Color(0.321569, 0.384314, 0.466667, 1)
-position = Vector2(266, 122)
-scale = Vector2(267, 123)
+scale = Vector2(90.9973, 93.2699)
 texture = ExtResource("2_ipej5")
 script = ExtResource("6_od7a5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron"]
-position = Vector2(266, 120)
-shape = SubResource("CircleShape2D_tjyik")
+shape = SubResource("RectangleShape2D_vcwyc")
 
 [node name="StirArea" type="Area2D" parent="Couldron"]
-position = Vector2(-52.6511, 121.396)
-scale = Vector2(-0.742886, 0.842147)
+position = Vector2(2, 112)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron/StirArea"]
-shape = SubResource("CircleShape2D_lgx8n")
+shape = SubResource("CircleShape2D_x38ga")
 
 [node name="Counter2" type="StaticBody2D" parent="."]
 position = Vector2(706, 50)
