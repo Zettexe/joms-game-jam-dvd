@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=23 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://MoveCamera.gd" id="1_krewk"]
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://icon.svg" id="1_qrxup"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" path="res://Player.gd" id="3_tpo6f"]
 [ext_resource type="Script" path="res://NegotiatorDebug.gd" id="5_2mun6"]
 [ext_resource type="Script" path="res://TestNegotiator.gd" id="5_50750"]
+[ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://fanderson_stare.png" id="6_eg6bn"]
+[ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Anderson_Stare.png" id="6_eova8"]
+[ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://confusedguy.png" id="7_yd2e6"]
+[ext_resource type="Script" path="res://Dialogue.gd" id="8_q5mnr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
@@ -37,6 +41,9 @@ radius = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgx8n"]
 radius = 128.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4aft"]
+bg_color = Color(1, 1, 1, 0)
 
 [node name="Node2D" type="Node2D"]
 
@@ -184,6 +191,7 @@ shape = SubResource("RectangleShape2D_2cmwi")
 [node name="TestNegotiator" type="StaticBody2D" parent="."]
 position = Vector2(1093, 1377)
 script = ExtResource("5_50750")
+npc_texture = ExtResource("6_eg6bn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator"]
 shape = SubResource("CircleShape2D_qid7x")
@@ -201,6 +209,8 @@ shape = SubResource("CircleShape2D_lgx8n")
 
 [node name="TestNegotiator2" type="StaticBody2D" parent="."]
 position = Vector2(1268, 1375)
+script = ExtResource("5_50750")
+npc_texture = ExtResource("6_eova8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2"]
 shape = SubResource("CircleShape2D_qid7x")
@@ -232,6 +242,76 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3/DialogueArea"]
 shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBackground" type="Panel" parent="CanvasLayer" groups=["Dialogue"]]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4aft")
+script = ExtResource("8_q5mnr")
+
+[node name="PlayerTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 0
+offset_top = 476.0
+offset_right = 602.0
+offset_bottom = 1153.0
+texture = ExtResource("7_yd2e6")
+
+[node name="NPCTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -660.0
+offset_top = -681.0
+offset_right = 158.0
+offset_bottom = 116.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("6_eova8")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Dialogue" type="Panel" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 480.0
+offset_top = -310.0
+offset_right = -480.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(500, 150)
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/DialogueBackground/Dialogue"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+text = "Hewo I wam text man"
+scroll_active = false
+scroll_following = true
 
 [connection signal="area_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
 [connection signal="body_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
