@@ -22,7 +22,7 @@ func _input(event):
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if direction and lock_velocity:
+	if direction and not lock_velocity:
 		velocity = direction * SPEED
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, delta * SPEED * STOPPING_FACTOR)
