@@ -1,16 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://brgrsysnaaia8"]
-
+[gd_scene load_steps=22 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://MoveCamera.gd" id="1_krewk"]
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://icon.svg" id="1_qrxup"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://placeholder.png" id="2_ipej5"]
 [ext_resource type="Script" path="res://Player.gd" id="3_tpo6f"]
 [ext_resource type="Script" path="res://NegotiatorDebug.gd" id="5_2mun6"]
-
-[ext_resource type="Script" path="res://FridgeDebug.gd" id="6_od7a5"]
-[ext_resource type="Texture2D" path="res://1580893542chef-hat-freesvg.org.svg" id="7_j6bsp"]
-
 [ext_resource type="Script" path="res://TestNegotiator.gd" id="5_50750"]
+[ext_resource type="Script" path="res://FridgeDebug.gd" id="6_od7a5"]
+[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://1580893542chef-hat-freesvg.org.svg" id="7_j6bsp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
