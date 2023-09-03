@@ -17,11 +17,12 @@ func _input(event):
 				shortest_distance_area = area
 		var node = shortest_distance_area.get_parent()
 		if node.has_method("_interact"):
-			node._interact(self)
+			set_process_input(false)
+			node._interact()
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if direction and not lock_velocity:
+	if direction and is_processing_input():
 		velocity = direction * SPEED
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, delta * SPEED * STOPPING_FACTOR)
@@ -33,6 +34,9 @@ func _on_player_area_entered(area):
 
 func _on_player_area_exited(area):
 	overlapping_areas.erase(area)
+
+func stop_interacting():
+	set_process_input(true)
 
 func lock_movement():
 	lock_velocity = true

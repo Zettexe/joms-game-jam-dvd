@@ -1,24 +1,25 @@
 extends StaticBody2D
 
 signal interaction_done
-var interacting = false
 
-func _interact(player):
+@export var npc_texture: Texture2D
+@onready var player = get_tree().get_first_node_in_group("Player")
+
+func _interact():
 	print("Interacted with TestNegotiator")
 	player.lock_movement()
-	
-	interacting = true
 	await interaction_done
-	interacting = false
-	
+	print("Stopped interacting with TestNegotiator")
 	player.unlock_movement()
+	player.stop_interacting()
 
-var timer = 0
-func _process(delta):
-	if not interacting:
+func _input(event):
+	if player.is_processing_input():
 		return
 	
-	print(timer)
-	timer += 1
-	if timer >= 500:
+	if event.is_action("interact", true) and event.pressed:
 		emit_signal("interaction_done")
+
+func _process(delta):
+	if player.is_processing_input():
+		return
