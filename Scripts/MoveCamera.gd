@@ -1,7 +1,10 @@
 extends Camera2D
 
 const SPEED = 10
-var target_position = Vector2.ZERO
+var target_position = Vector2(0, 1050) # Vector2.ZERO
+
+func _ready():
+	position = target_position
 
 func _process(delta):
 	position = position.lerp(target_position, delta * SPEED)

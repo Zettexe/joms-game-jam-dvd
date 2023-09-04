@@ -1,11 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=23 format=3 uid="uid://brgrsysnaaia8"]
 
-[ext_resource type="Script" path="res://MoveCamera.gd" id="1_krewk"]
-[ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://icon.svg" id="1_qrxup"]
-[ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://placeholder.png" id="2_ipej5"]
-[ext_resource type="Script" path="res://Player.gd" id="3_tpo6f"]
-[ext_resource type="Script" path="res://NegotiatorDebug.gd" id="5_2mun6"]
-[ext_resource type="Script" path="res://TestNegotiator.gd" id="5_50750"]
+[ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
+[ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="3_evedd"]
+[ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://Assets/icon.svg" id="4_76lv5"]
+[ext_resource type="Script" path="res://Scripts/TestNegotiator.gd" id="5_afgmv"]
+[ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://Assets/fanderson_stare.png" id="6_51i6e"]
+[ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
+[ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
+[ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
+[ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
@@ -38,6 +42,9 @@ radius = 64.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgx8n"]
 radius = 128.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4aft"]
+bg_color = Color(1, 1, 1, 0)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -48,7 +55,7 @@ limit_right = 1920
 limit_bottom = 2130
 position_smoothing_speed = 7.0
 editor_draw_limits = true
-script = ExtResource("1_krewk")
+script = ExtResource("1_ng558")
 
 [node name="Rooms" type="StaticBody2D" parent="."]
 
@@ -65,20 +72,20 @@ shape = SubResource("RectangleShape2D_qtc5e")
 [node name="WallTop" type="Sprite2D" parent="Rooms/Kitchen"]
 modulate = Color(0.596078, 0.596078, 0.596078, 1)
 scale = Vector2(960, 540)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Shadow" type="Sprite2D" parent="Rooms/Kitchen"]
 modulate = Color(0.529412, 0.529412, 0.529412, 1)
 position = Vector2(30, 30)
 scale = Vector2(930, 510)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Floor" type="Sprite2D" parent="Rooms/Kitchen"]
 position = Vector2(50, 50)
 scale = Vector2(910, 490)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Other" type="Node2D" parent="Rooms"]
@@ -94,20 +101,20 @@ shape = SubResource("RectangleShape2D_qtc5e")
 [node name="WallTop" type="Sprite2D" parent="Rooms/Other"]
 modulate = Color(0.596078, 0.596078, 0.596078, 1)
 scale = Vector2(960, 540)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Shadow" type="Sprite2D" parent="Rooms/Other"]
 modulate = Color(0.529412, 0.529412, 0.529412, 1)
 position = Vector2(30, 30)
 scale = Vector2(930, 510)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Floor" type="Sprite2D" parent="Rooms/Other"]
 position = Vector2(50, 50)
 scale = Vector2(910, 490)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Door" type="Node2D" parent="Rooms"]
@@ -116,11 +123,11 @@ position = Vector2(300, 1065)
 [node name="Shadow" type="Sprite2D" parent="Rooms/Door"]
 modulate = Color(0.529412, 0.529412, 0.529412, 1)
 scale = Vector2(150, 35)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 
 [node name="Floor" type="Sprite2D" parent="Rooms/Door"]
 scale = Vector2(130, 35)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 
 [node name="LeftDoorCollision" type="CollisionShape2D" parent="Rooms"]
 position = Vector2(110, 1065)
@@ -148,18 +155,18 @@ shape = SubResource("WorldBoundaryShape2D_vwj7x")
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
 process_priority = -100
-position = Vector2(960, 540)
+position = Vector2(681, 1533)
 collision_layer = 3
 collision_mask = 3
 motion_mode = 1
 platform_on_leave = 2
-script = ExtResource("3_tpo6f")
+script = ExtResource("3_evedd")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_mpehq")
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_qrxup")
+texture = ExtResource("4_76lv5")
 
 [node name="PlayerArea" type="Area2D" parent="Player"]
 collision_layer = 2
@@ -175,7 +182,7 @@ position = Vector2(1023, 1467)
 modulate = Color(0.529412, 0.321569, 0.156863, 1)
 position = Vector2(266, 122)
 scale = Vector2(267, 123)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
 position = Vector2(266, 121.5)
@@ -183,14 +190,16 @@ shape = SubResource("RectangleShape2D_2cmwi")
 
 [node name="TestNegotiator" type="StaticBody2D" parent="."]
 position = Vector2(1093, 1377)
-script = ExtResource("5_50750")
+script = ExtResource("5_afgmv")
+npc_name = 1
+npc_texture = ExtResource("6_51i6e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator"]
 shape = SubResource("CircleShape2D_qid7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestNegotiator"]
-texture = ExtResource("1_qrxup")
-script = ExtResource("5_2mun6")
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestNegotiator"]
 collision_layer = 2
@@ -201,13 +210,15 @@ shape = SubResource("CircleShape2D_lgx8n")
 
 [node name="TestNegotiator2" type="StaticBody2D" parent="."]
 position = Vector2(1268, 1375)
+script = ExtResource("5_afgmv")
+npc_texture = ExtResource("8_1bh20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2"]
 shape = SubResource("CircleShape2D_qid7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestNegotiator2"]
-texture = ExtResource("1_qrxup")
-script = ExtResource("5_2mun6")
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestNegotiator2"]
 collision_layer = 2
@@ -223,8 +234,8 @@ position = Vector2(1462, 1373)
 shape = SubResource("CircleShape2D_qid7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestNegotiator3"]
-texture = ExtResource("1_qrxup")
-script = ExtResource("5_2mun6")
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestNegotiator3"]
 collision_layer = 2
@@ -232,6 +243,119 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3/DialogueArea"]
 shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBackground" type="Panel" parent="CanvasLayer" groups=["Dialogue"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4aft")
+script = ExtResource("9_skd70")
+
+[node name="PlayerContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = -960.0
+offset_bottom = -1080.0
+
+[node name="PlayerTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/PlayerContainer"]
+layout_mode = 0
+offset_top = 476.0
+offset_right = 602.0
+offset_bottom = 1153.0
+texture = ExtResource("10_2icuy")
+
+[node name="NPCContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+
+[node name="NPCTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/NPCContainer"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1260.0
+offset_top = 399.0
+offset_right = 2078.0
+offset_bottom = 1196.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("8_1bh20")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="DialogueContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
+anchors_preset = 0
+
+[node name="Dialogue" type="Panel" parent="CanvasLayer/DialogueBackground/DialogueContainer"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 480.0
+offset_top = 770.0
+offset_right = 1440.0
+offset_bottom = 1070.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(500, 150)
+
+[node name="Content" type="RichTextLabel" parent="CanvasLayer/DialogueBackground/DialogueContainer/Dialogue"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+scroll_active = false
+scroll_following = true
+
+[node name="Name" type="Panel" parent="CanvasLayer/DialogueBackground/DialogueContainer"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 806.0
+offset_top = 714.0
+offset_right = 1106.0
+offset_bottom = 764.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/DialogueBackground/DialogueContainer/Name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "This is a bug"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
 
 [connection signal="area_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
 [connection signal="body_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]

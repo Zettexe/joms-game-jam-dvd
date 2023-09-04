@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di4omge6xef6y"
-path="res://.godot/imported/placeholder.png-ef21141e6f7fef7ccb4b638348400c3b.ctex"
+uid="uid://dfo28cncl8yb"
+path="res://.godot/imported/fanderson_stare.png-6cd2921ebbbc0d3fb0afe36406db53c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholder.png"
-dest_files=["res://.godot/imported/placeholder.png-ef21141e6f7fef7ccb4b638348400c3b.ctex"]
+source_file="res://Assets/fanderson_stare.png"
+dest_files=["res://.godot/imported/fanderson_stare.png-6cd2921ebbbc0d3fb0afe36406db53c4.ctex"]
 
 [params]
 
