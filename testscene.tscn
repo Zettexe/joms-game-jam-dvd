@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b8syhjay3x4xo"]
+[gd_scene load_steps=27 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -403,9 +403,9 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_lgx8n")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="DialogueBackground" type="Panel" parent="CanvasLayer" groups=["Dialogue"]]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
