@@ -19,6 +19,8 @@ func _input(event):
 		if node.has_method("_interact"):
 			set_process_input(false)
 			node._interact()
+		else:
+			print("%s does not contain a definition for _interact" % node.name)
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
