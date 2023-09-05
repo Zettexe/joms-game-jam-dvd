@@ -32,7 +32,7 @@ normal = Vector2(-1, 0)
 radius = 64.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cmwi"]
-size = Vector2(534, 245)
+size = Vector2(534, 240)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qid7x"]
 radius = 64.0
