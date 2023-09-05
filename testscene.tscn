@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=23 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=27 format=3 uid="uid://b8syhjay3x4xo"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -7,12 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://Assets/icon.svg" id="4_76lv5"]
 [ext_resource type="Script" path="res://Scripts/TestNegotiator.gd" id="5_afgmv"]
 [ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://Assets/fanderson_stare.png" id="6_51i6e"]
+[ext_resource type="Script" path="res://FridgeDebug.gd" id="6_od7a5"]
 [ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
 [ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
 [ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
 [ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
-[ext_resource type="Script" path="res://FridgeDebug.gd" id="6_od7a5"]
-[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://1580893542chef-hat-freesvg.org.svg" id="7_j6bsp"]
+[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://Assets/1580893542chef-hat-freesvg.org.svg" id="10_4bysy"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hh00"]
@@ -49,6 +49,7 @@ size = Vector2(182, 186)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x38ga"]
 radius = 94.0053
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4aft"]
 bg_color = Color(1, 1, 1, 0)
 
@@ -357,7 +358,7 @@ shape = SubResource("CircleShape2D_qid7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestChef1"]
 scale = Vector2(0.14501, 0.131079)
-texture = ExtResource("7_j6bsp")
+texture = ExtResource("10_4bysy")
 script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestChef1"]
@@ -402,6 +403,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_lgx8n")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="DialogueBackground" type="Panel" parent="CanvasLayer" groups=["Dialogue"]]
 anchors_preset = 15
