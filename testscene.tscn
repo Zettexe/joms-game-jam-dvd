@@ -11,7 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
 [ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
 [ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
-
+[ext_resource type="Script" path="res://FridgeDebug.gd" id="6_od7a5"]
+[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://1580893542chef-hat-freesvg.org.svg" id="7_j6bsp"]
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hh00"]
@@ -258,7 +259,7 @@ scale = Vector2(0.4, 0.925)
 modulate = Color(0.321569, 0.384314, 0.466667, 1)
 position = Vector2(266, 122)
 scale = Vector2(267, 123)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 script = ExtResource("6_od7a5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge"]
@@ -282,7 +283,7 @@ scale = Vector2(1.5191, 0.496256)
 modulate = Color(0.529412, 0.321569, 0.156863, 1)
 position = Vector2(266, 122)
 scale = Vector2(267, 123)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Counter1"]
 position = Vector2(266, 121.5)
@@ -294,7 +295,7 @@ position = Vector2(285, 141)
 [node name="Sprite2D" type="Sprite2D" parent="Couldron"]
 modulate = Color(0.321569, 0.384314, 0.466667, 1)
 scale = Vector2(90.9973, 93.2699)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 script = ExtResource("6_od7a5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron"]
@@ -316,7 +317,7 @@ scale = Vector2(2.18702, 0.496256)
 modulate = Color(0.529412, 0.321569, 0.156863, 1)
 position = Vector2(266, 122)
 scale = Vector2(267, 123)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Counter2"]
 position = Vector2(266, 121.5)
@@ -330,7 +331,7 @@ scale = Vector2(0.408375, 1.13284)
 modulate = Color(0.321569, 0.384314, 0.466667, 1)
 position = Vector2(266, 122)
 scale = Vector2(267, 123)
-texture = ExtResource("2_ipej5")
+texture = ExtResource("2_2rncu")
 script = ExtResource("6_od7a5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove1"]
@@ -357,7 +358,7 @@ shape = SubResource("CircleShape2D_qid7x")
 [node name="Sprite2D" type="Sprite2D" parent="TestChef1"]
 scale = Vector2(0.14501, 0.131079)
 texture = ExtResource("7_j6bsp")
-script = ExtResource("5_2mun6")
+script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestChef1"]
 collision_layer = 2
@@ -373,8 +374,8 @@ position = Vector2(450, 146)
 shape = SubResource("CircleShape2D_qid7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestChef2"]
-texture = ExtResource("1_qrxup")
-script = ExtResource("5_2mun6")
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestChef2"]
 collision_layer = 2
@@ -390,8 +391,8 @@ position = Vector2(1093, 240)
 shape = SubResource("CircleShape2D_qid7x")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestChef3"]
-texture = ExtResource("1_qrxup")
-script = ExtResource("5_2mun6")
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
 
 [node name="DialogueArea" type="Area2D" parent="TestChef3"]
 collision_layer = 2
