@@ -23,6 +23,21 @@ enum Reputation {
 	GOVERNMENT_5 =  5
 }
 
+enum Minigame{
+	NONE,
+	SLICE_MEAT
+}
+
+var minigame_name_pretty = {
+	Minigame.SLICE_MEAT:
+		"Slice The Meat"
+}
+
+var instructions = {
+	Minigame.SLICE_MEAT:
+		"Cut the steak into 8 slices as evenly as possible."
+}
+
 var dialogue = {
 	Character.FRANCINE: {
 		CYCLE_TUTORIAL: {
