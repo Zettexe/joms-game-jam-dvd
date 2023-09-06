@@ -1,5 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://brgrsysnaaia8"]
-
+[gd_scene load_steps=42 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -22,13 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://hadfvqjx0a1c" path="res://Assets/Chair4.png" id="10_mtiu6"]
 [ext_resource type="Texture2D" uid="uid://b2087uqqq0y3" path="res://Assets/Bookshelf.png" id="11_g0br0"]
 [ext_resource type="Texture2D" uid="uid://clvbv2m83olbo" path="res://Assets/Couch.png" id="12_f8asf"]
-[ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
-[ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
-[ext_resource type="Script" path="res://Scripts/TestStation.gd" id="9_dr1nj"]
-[ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
-[ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
-[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://Assets/1580893542chef-hat-freesvg.org.svg" id="10_4bysy"]
-[ext_resource type="Script" path="res://Scripts/FridgeDebug.gd" id="10_r5lkx"]
 [ext_resource type="Script" path="res://Scripts/Minigame.gd" id="14_rjkqa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
@@ -321,7 +313,7 @@ platform_on_leave = 2
 script = ExtResource("3_evedd")
 
 [node name="PlayerCollision" type="CollisionPolygon2D" parent="Player"]
-polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91887e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.8783e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17566e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
 script = ExtResource("5_ou1il")
 radius_x = 64
 radius_y = 48
@@ -331,7 +323,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Player/PlayerArea"]
-polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91887e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.8783e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17566e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
 script = ExtResource("5_ou1il")
 radius_x = 64
 radius_y = 48
@@ -349,7 +341,7 @@ npc_texture = ExtResource("6_51i6e")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator"]
 visible = false
-polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91887e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.8783e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17566e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
 script = ExtResource("5_ou1il")
 radius_x = 64
 radius_y = 48
@@ -359,7 +351,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator/DialogueArea"]
-polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83774e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17566e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35132e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
 script = ExtResource("5_ou1il")
 radius_x = 128
 radius_y = 96
@@ -376,7 +368,7 @@ npc_texture = ExtResource("8_1bh20")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator2"]
 visible = false
-polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91887e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.8783e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17566e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
 script = ExtResource("5_ou1il")
 radius_x = 64
 radius_y = 48
@@ -386,7 +378,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator2/DialogueArea"]
-polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83774e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17566e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35132e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
 script = ExtResource("5_ou1il")
 radius_x = 128
 radius_y = 96
@@ -401,7 +393,7 @@ position = Vector2(1590, 1327)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator3"]
 visible = false
-polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91887e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.8783e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17566e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
 script = ExtResource("5_ou1il")
 radius_x = 64
 radius_y = 48
@@ -411,142 +403,16 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator3/DialogueArea"]
-polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83774e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17566e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35132e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
 script = ExtResource("5_ou1il")
 radius_x = 128
 radius_y = 96
 
 [node name="Sprite2D" type="Sprite2D" parent="TestNegotiator3"]
 position = Vector2(0, -64)
-[node name="Fridge" type="StaticBody2D" parent="."]
-position = Vector2(1657, 680)
-scale = Vector2(0.4, 0.925)
-script = ExtResource("9_dr1nj")
-minigame_name = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="Fridge"]
-modulate = Color(0.321569, 0.384314, 0.466667, 1)
-position = Vector2(266, 122)
-scale = Vector2(267, 123)
-texture = ExtResource("2_2rncu")
-script = ExtResource("10_r5lkx")
-
-; [node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge"]
-; position = Vector2(266, 121.5)
-; shape = SubResource("RectangleShape2D_2cmwi")
-
-[node name="DoorOpenArea" type="Area2D" parent="Fridge"]
-position = Vector2(-52.6511, 121.396)
-scale = Vector2(-0.895326, 0.748122)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge/DoorOpenArea"]
-shape = SubResource("CircleShape2D_lgx8n")
-
-[node name="Counter1" type="StaticBody2D" parent="."]
-position = Vector2(1065, 919)
-scale = Vector2(1.5191, 0.496256)
-
-[node name="Sprite2D" type="Sprite2D" parent="Counter1"]
-modulate = Color(0.529412, 0.321569, 0.156863, 1)
-position = Vector2(266, 122)
-scale = Vector2(267, 123)
-texture = ExtResource("2_2rncu")
-
-; [node name="CollisionShape2D" type="CollisionShape2D" parent="Counter1"]
-; position = Vector2(266, 121.5)
-; shape = SubResource("RectangleShape2D_2cmwi")
-
-[node name="Couldron" type="StaticBody2D" parent="."]
-position = Vector2(285, 141)
-
-[node name="Sprite2D" type="Sprite2D" parent="Couldron"]
-modulate = Color(0.321569, 0.384314, 0.466667, 1)
-scale = Vector2(90.9973, 93.2699)
-texture = ExtResource("2_2rncu")
-script = ExtResource("10_r5lkx")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron"]
-shape = SubResource("RectangleShape2D_vcwyc")
-
-[node name="StirArea" type="Area2D" parent="Couldron"]
-position = Vector2(2, 112)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron/StirArea"]
-shape = SubResource("CircleShape2D_x38ga")
-
-[node name="Counter2" type="StaticBody2D" parent="."]
-position = Vector2(706, 50)
-scale = Vector2(2.18702, 0.496256)
-
-[node name="Sprite2D" type="Sprite2D" parent="Counter2"]
-modulate = Color(0.529412, 0.321569, 0.156863, 1)
-position = Vector2(266, 122)
-scale = Vector2(267, 123)
-texture = ExtResource("2_2rncu")
-
-; [node name="CollisionShape2D" type="CollisionShape2D" parent="Counter2"]
-; position = Vector2(266, 121.5)
-; shape = SubResource("RectangleShape2D_2cmwi")
-
-[node name="Stove1" type="StaticBody2D" parent="."]
-position = Vector2(1657, 357)
-scale = Vector2(0.408375, 1.13284)
-
-[node name="Sprite2D" type="Sprite2D" parent="Stove1"]
-modulate = Color(0.321569, 0.384314, 0.466667, 1)
-position = Vector2(266, 122)
-scale = Vector2(267, 123)
-texture = ExtResource("2_2rncu")
-script = ExtResource("10_r5lkx")
-
-; [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove1"]
-; position = Vector2(266, 121.5)
-; shape = SubResource("RectangleShape2D_2cmwi")
-
-[node name="DoorOpenArea" type="Area2D" parent="Stove1"]
-position = Vector2(-52.6511, 121.396)
-scale = Vector2(-0.895326, 0.748122)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove1/DoorOpenArea"]
-scale = Vector2(0.754036, 1.1671)
-shape = SubResource("CircleShape2D_lgx8n")
-
-[node name="TestChef1" type="StaticBody2D" parent="."]
-position = Vector2(1592, 571)
-rotation = 1.5708
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef1"]
-shape = SubResource("CircleShape2D_qid7x")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestChef1"]
-scale = Vector2(0.14501, 0.131079)
-texture = ExtResource("10_4bysy")
-script = ExtResource("7_rasr7")
-
-[node name="DialogueArea" type="Area2D" parent="TestChef1"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef1/DialogueArea"]
-shape = SubResource("CircleShape2D_lgx8n")
-
-[node name="TestChef2" type="StaticBody2D" parent="."]
-position = Vector2(450, 146)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef2"]
-shape = SubResource("CircleShape2D_qid7x")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestChef2"]
-texture = ExtResource("4_76lv5")
-script = ExtResource("7_rasr7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="DialogueBackground" type="Panel" parent="CanvasLayer" groups=["Dialogue"]]
 anchors_preset = 15
@@ -660,6 +526,7 @@ vertical_alignment = 1
 clip_text = true
 
 [node name="MinigameLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="MinigameBackground" type="Panel" parent="MinigameLayer" groups=["Minigame"]]
 self_modulate = Color(1, 1, 1, 0)
