@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=44 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/CollisionTool.gd" id="5_ou1il"]
 [ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://Assets/fanderson_stare.png" id="6_51i6e"]
 [ext_resource type="Texture2D" uid="uid://cmbb5b3djr83t" path="res://Assets/table.png" id="6_af1wf"]
+[ext_resource type="Script" path="res://Scripts/TestStationCollision.gd" id="6_ohfra"]
 [ext_resource type="Texture2D" uid="uid://cf6f3kp7aq64t" path="res://Assets/Chair1.png" id="7_jrws1"]
 [ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
 [ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
@@ -22,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://b2087uqqq0y3" path="res://Assets/Bookshelf.png" id="11_g0br0"]
 [ext_resource type="Texture2D" uid="uid://clvbv2m83olbo" path="res://Assets/Couch.png" id="12_f8asf"]
 [ext_resource type="Script" path="res://Scripts/Minigame.gd" id="14_rjkqa"]
+[ext_resource type="Script" path="res://Scripts/SliceMeat.gd" id="24_o8ud4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
@@ -63,9 +65,6 @@ size = Vector2(133, 265)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqvr0"]
 size = Vector2(106, 66)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhpv0"]
-size = Vector2(192, 84)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kb5tc"]
 size = Vector2(240, 84)
 
@@ -74,6 +73,9 @@ size = Vector2(872, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jl2le"]
 size = Vector2(144, 531)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owjmt"]
+size = Vector2(192, 84)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4aft"]
 bg_color = Color(1, 1, 1, 0)
@@ -243,13 +245,21 @@ shape = SubResource("RectangleShape2D_uqvr0")
 position = Vector2(490, 1467)
 shape = SubResource("RectangleShape2D_uqvr0")
 
-[node name="FridgeCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(328, 482)
-shape = SubResource("RectangleShape2D_qhpv0")
-
 [node name="OvenCollision" type="CollisionShape2D" parent="Rooms"]
 position = Vector2(808, 482)
 shape = SubResource("RectangleShape2D_kb5tc")
+script = ExtResource("6_ohfra")
+minigame_name = 1
+
+[node name="MinigameArea" type="Area2D" parent="Rooms/OvenCollision"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Rooms/OvenCollision/MinigameArea"]
+polygon = PackedVector2Array(99, 0, 95.6267, 24.8466, 85.7365, 48, 70.0036, 67.8822, 49.5, 83.1384, 25.6231, 92.7289, 6.0618e-15, 96, -25.6231, 92.7289, -49.5, 83.1384, -70.0036, 67.8822, -85.7365, 48, -95.6267, 24.8466, -99, 1.17562e-14, -95.6267, -24.8466, -85.7365, -48, -70.0036, -67.8822, -49.5, -83.1384, -25.6231, -92.7289, -1.81854e-14, -96, 25.6231, -92.7289, 49.5, -83.1384, 70.0036, -67.8822, 85.7365, -48, 95.6267, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 99
+radius_y = 96
 
 [node name="CounterCollision1" type="CollisionShape2D" parent="Rooms"]
 position = Vector2(1444, 482)
@@ -258,6 +268,22 @@ shape = SubResource("RectangleShape2D_om7mq")
 [node name="CounterCollision2" type="CollisionShape2D" parent="Rooms"]
 position = Vector2(1808, 789.5)
 shape = SubResource("RectangleShape2D_jl2le")
+
+[node name="FridgeCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(328, 482)
+shape = SubResource("RectangleShape2D_owjmt")
+script = ExtResource("6_ohfra")
+minigame_name = 1
+
+[node name="MinigameArea" type="Area2D" parent="Rooms/FridgeCollision"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Rooms/FridgeCollision/MinigameArea"]
+polygon = PackedVector2Array(99, 0, 95.6267, 24.8466, 85.7365, 48, 70.0036, 67.8822, 49.5, 83.1384, 25.6231, 92.7289, 6.0618e-15, 96, -25.6231, 92.7289, -49.5, 83.1384, -70.0036, 67.8822, -85.7365, 48, -95.6267, 24.8466, -99, 1.17562e-14, -95.6267, -24.8466, -85.7365, -48, -70.0036, -67.8822, -49.5, -83.1384, -25.6231, -92.7289, -1.81854e-14, -96, 25.6231, -92.7289, 49.5, -83.1384, 70.0036, -67.8822, 85.7365, -48, 95.6267, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 99
+radius_y = 96
 
 [node name="Table Set" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -340,7 +366,6 @@ npc_name = 1
 npc_texture = ExtResource("6_51i6e")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator"]
-visible = false
 polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
 script = ExtResource("5_ou1il")
 radius_x = 64
@@ -526,7 +551,6 @@ vertical_alignment = 1
 clip_text = true
 
 [node name="MinigameLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="MinigameBackground" type="Panel" parent="MinigameLayer" groups=["Minigame"]]
 self_modulate = Color(1, 1, 1, 0)
@@ -537,16 +561,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("14_rjkqa")
 
-[node name="MinigameContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
+[node name="InstructionsContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
 layout_mode = 2
 anchors_preset = 0
 
-[node name="Title" type="Panel" parent="MinigameLayer/MinigameBackground/MinigameContainer"]
+[node name="Title" type="Panel" parent="MinigameLayer/MinigameBackground/InstructionsContainer"]
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 100.0
 
-[node name="Label" type="Label" parent="MinigameLayer/MinigameBackground/MinigameContainer/Title"]
+[node name="Label" type="Label" parent="MinigameLayer/MinigameBackground/InstructionsContainer/Title"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -556,12 +580,13 @@ offset_top = 10.0
 offset_right = -10.0
 offset_bottom = -10.0
 theme_override_font_sizes/font_size = 31
-text = "Make Even Slices!"
+text = "You Shouldn't See This
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="Instructions" type="Panel" parent="MinigameLayer/MinigameBackground/MinigameContainer"]
+[node name="Instructions" type="Panel" parent="MinigameLayer/MinigameBackground/InstructionsContainer"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -575,7 +600,7 @@ offset_bottom = 753.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Content" type="RichTextLabel" parent="MinigameLayer/MinigameBackground/MinigameContainer/Instructions"]
+[node name="Content" type="RichTextLabel" parent="MinigameLayer/MinigameBackground/InstructionsContainer/Instructions"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -592,10 +617,33 @@ theme_override_font_sizes/mono_font_size = 30
 scroll_active = false
 scroll_following = true
 
+[node name="MinigameContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = -700.0
+offset_bottom = 20.0
+grow_vertical = 0
+
+[node name="SliceMeat" type="Panel" parent="MinigameLayer/MinigameBackground/MinigameContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_o8ud4")
+
 [connection signal="area_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
 [connection signal="body_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
 [connection signal="area_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
 [connection signal="body_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
+[connection signal="body_entered" from="Rooms/OvenCollision/MinigameArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Rooms/OvenCollision/MinigameArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="Rooms/FridgeCollision/MinigameArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Rooms/FridgeCollision/MinigameArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_exited"]
 [connection signal="area_entered" from="Player/PlayerArea" to="Player" method="_on_player_area_entered"]
 [connection signal="area_exited" from="Player/PlayerArea" to="Player" method="_on_player_area_exited"]
 [connection signal="body_entered" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_entered"]
