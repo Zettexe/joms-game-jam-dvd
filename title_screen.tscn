@@ -1,14 +1,100 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8u1wearuy2xu"]
+[gd_scene load_steps=14 format=3 uid="uid://b8u1wearuy2xu"]
 
 [ext_resource type="Script" path="res://title.gd" id="1_p44cu"]
 [ext_resource type="Texture2D" uid="uid://c0pdcr0163dio" path="res://Assets/ctrl_z_production.png" id="2_dou2c"]
+[ext_resource type="Texture2D" uid="uid://dlk1toplmpewa" path="res://Assets/full_text.png" id="2_o7q7u"]
+[ext_resource type="Texture2D" uid="uid://cp7ig6adbe52m" path="res://Assets/four_text.png" id="3_yvfj8"]
+[ext_resource type="Texture2D" uid="uid://dtbf5olacrxmf" path="res://Assets/three_text.png" id="4_jp6k6"]
+[ext_resource type="Texture2D" uid="uid://bbfryoelcp1d5" path="res://Assets/two_text.png" id="5_kl6j7"]
+[ext_resource type="Texture2D" uid="uid://bpk52c1k1cwfv" path="res://Assets/one_text.png" id="6_flhmb"]
+[ext_resource type="Texture2D" uid="uid://8bjuew807ivk" path="res://Assets/title_screen.png" id="7_cax8x"]
 
 [sub_resource type="Animation" id="Animation_yij5n"]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("black_screen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("one_text:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_flhmb")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("two_text:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_kl6j7")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("three_text:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_jp6k6")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("four_text:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_yvfj8")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("five_text:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_o7q7u")]
+}
+
+[sub_resource type="Animation" id="Animation_u4vjl"]
+resource_name = "actual_title"
+length = 2.0
+
+[sub_resource type="Animation" id="Animation_mr2n4"]
+resource_name = "studio_fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("black_screen:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -18,26 +104,76 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_mr2n4"]
-resource_name = "title_screen"
-length = 2.0
+[sub_resource type="Animation" id="Animation_on05d"]
+resource_name = "one_to_two_text"
+length = 22.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("one_text:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+"update": 1,
+"values": [ExtResource("6_flhmb"), null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("two_text:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("5_kl6j7"), null]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("three_text:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(7, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_jp6k6"), null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("four_text:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(12, 17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_yvfj8"), null]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("five_text:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(17, 22.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_o7q7u"), null]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0je8e"]
 _data = {
 "RESET": SubResource("Animation_yij5n"),
-"title_screen": SubResource("Animation_mr2n4")
+"actual_title": SubResource("Animation_u4vjl"),
+"one_to_two_text": SubResource("Animation_on05d"),
+"studio_fade": SubResource("Animation_mr2n4")
 }
 
 [node name="Node2D" type="Node2D"]
@@ -45,16 +181,34 @@ script = ExtResource("1_p44cu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="five_text" type="Sprite2D" parent="."]
+texture = ExtResource("2_o7q7u")
+
+[node name="four_text" type="Sprite2D" parent="."]
+texture = ExtResource("3_yvfj8")
+
+[node name="three_text" type="Sprite2D" parent="."]
+texture = ExtResource("4_jp6k6")
+
+[node name="two_text" type="Sprite2D" parent="."]
+texture = ExtResource("5_kl6j7")
+
+[node name="one_text" type="Sprite2D" parent="."]
+texture = ExtResource("6_flhmb")
+
+[node name="title_screen" type="Sprite2D" parent="."]
+texture = ExtResource("7_cax8x")
+
+[node name="ctrlz" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
 texture = ExtResource("2_dou2c")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="black_screen" type="ColorRect" parent="."]
 offset_left = -964.0
 offset_top = -549.0
 offset_right = 958.0
 offset_bottom = 536.0
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
