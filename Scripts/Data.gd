@@ -1,13 +1,17 @@
 extends Node
 
-var current_cycle = CYCLE_1
+var current_cycle = CYCLE_TUTORIAL
 var current_reputation = Reputation.NEUTRAL
 
 enum Character {
 	NONE,
-	FRANCINE
+	FRANCINE,
+	KARLOS,
+	HORTENSIA,
+	LEONIDAS,
+	REMY
 }
-const CHARACTER_NAMES = { Character.NONE: "This is a bug", Character.FRANCINE: "Francine" }
+const CHARACTER_NAMES = { Character.NONE: "This is a bug", Character.FRANCINE: "Francine", Character.KARLOS: "Karlos", Character.HORTENSIA: "Hortensia Briarheart", Character.LEONIDAS: "Leonidas Zarbounis", Character.REMY: "Remy Lingweenee" }
 enum { CYCLE_TUTORIAL, CYCLE_1, CYCLE_2, CYCLE_3 }
 enum Reputation { 
 	OPPOSITION_5 = -5, 
@@ -54,6 +58,30 @@ var dialogue = {
 			Reputation.GOVERNMENT_1: [
 				"This is cycle 1 reputation 1C dialogue, which is after day 1 and one towards clemencian reputation.",
 				"I am pleased with how negotiations are going."
+			]
+		}
+	},
+	Character.KARLOS: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [
+				"I am karlos",
+				"text box 2"
+			]
+		}
+	},
+	Character.HORTENSIA: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [
+				"I am hortensia",
+				"text box 2"
+			]
+		}
+	},
+	Character.LEONIDAS: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [
+				"I am leonidas",
+				"text box 2"
 			]
 		}
 	}

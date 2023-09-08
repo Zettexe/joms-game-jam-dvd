@@ -1,28 +1,29 @@
-[gd_scene load_steps=44 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=45 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
-[ext_resource type="Texture2D" uid="uid://c1hr7puwe85np" path="res://Assets/kitchen_background.png" id="2_ku4m6"]
+[ext_resource type="Texture2D" path="res://Assets/kitchen_background.png" id="2_ku4m6"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="3_evedd"]
-[ext_resource type="Texture2D" uid="uid://bgs0mlicl24p0" path="res://Assets/negotiationroom_raw.png" id="4_17g80"]
+[ext_resource type="Texture2D" path="res://Assets/negotiationroom_raw.png" id="4_17g80"]
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://Assets/icon.svg" id="4_76lv5"]
 [ext_resource type="Script" path="res://Scripts/TestNegotiator.gd" id="5_afgmv"]
-[ext_resource type="Texture2D" uid="uid://xl4py0hbg8rl" path="res://Assets/negotiationroom_wall.png" id="5_h5cot"]
+[ext_resource type="Texture2D" path="res://Assets/negotiationroom_wall.png" id="5_h5cot"]
 [ext_resource type="Script" path="res://Scripts/CollisionTool.gd" id="5_ou1il"]
 [ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://Assets/fanderson_stare.png" id="6_51i6e"]
-[ext_resource type="Texture2D" uid="uid://cmbb5b3djr83t" path="res://Assets/table.png" id="6_af1wf"]
+[ext_resource type="Texture2D" path="res://Assets/table.png" id="6_af1wf"]
 [ext_resource type="Script" path="res://Scripts/TestStationCollision.gd" id="6_ohfra"]
-[ext_resource type="Texture2D" uid="uid://cf6f3kp7aq64t" path="res://Assets/Chair1.png" id="7_jrws1"]
+[ext_resource type="Texture2D" path="res://Assets/Chair1.png" id="7_jrws1"]
 [ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
 [ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
-[ext_resource type="Texture2D" uid="uid://dwe5qc61apb6a" path="res://Assets/Chair2.png" id="8_11svf"]
-[ext_resource type="Texture2D" uid="uid://da2bjdmw47f5c" path="res://Assets/Chair3.png" id="9_64m3k"]
+[ext_resource type="Texture2D" path="res://Assets/Chair2.png" id="8_11svf"]
+[ext_resource type="Texture2D" path="res://Assets/Chair3.png" id="9_64m3k"]
 [ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
 [ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
-[ext_resource type="Texture2D" uid="uid://hadfvqjx0a1c" path="res://Assets/Chair4.png" id="10_mtiu6"]
-[ext_resource type="Texture2D" uid="uid://b2087uqqq0y3" path="res://Assets/Bookshelf.png" id="11_g0br0"]
-[ext_resource type="Texture2D" uid="uid://clvbv2m83olbo" path="res://Assets/Couch.png" id="12_f8asf"]
+[ext_resource type="Texture2D" path="res://Assets/Chair4.png" id="10_mtiu6"]
+[ext_resource type="Texture2D" path="res://Assets/Bookshelf.png" id="11_g0br0"]
+[ext_resource type="Texture2D" path="res://Assets/Couch.png" id="12_f8asf"]
 [ext_resource type="Script" path="res://Scripts/Minigame.gd" id="14_rjkqa"]
+[ext_resource type="Script" path="res://TestNegotiator2.gd" id="20_yxt2t"]
 [ext_resource type="Script" path="res://Scripts/SliceMeat.gd" id="24_o8ud4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
@@ -388,8 +389,7 @@ script = ExtResource("7_rasr7")
 
 [node name="TestNegotiator2" type="StaticBody2D" parent="."]
 position = Vector2(1370, 1101)
-script = ExtResource("5_afgmv")
-npc_texture = ExtResource("8_1bh20")
+script = ExtResource("20_yxt2t")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="TestNegotiator2"]
 visible = false
@@ -619,6 +619,7 @@ scroll_following = true
 
 [node name="MinigameContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
 layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 20.0

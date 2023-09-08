@@ -65,4 +65,5 @@ func _process(delta):
 	
 	var node_content = dialogue_content_node.text
 	if node_content != dialogue_content and dialogue_content.length() > node_content.length():
+		print(dialogue_content_node.text)
 		dialogue_content_node.text += dialogue_content[node_content.length()]
