@@ -53,24 +53,24 @@ var position = {
 			},
 		CYCLE_1: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.PAIXLING_1: []
 		},
 		CYCLE_2: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: []
 		},
 		CYCLE_3: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: [],
-			Reputation.OPPOSITION_3: [],
-			Reputation.GOVERNMENT_3: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.CLEMENCIANS_3: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: [],
+			Reputation.PAIXLING_3: []
 		}
 	},
 	Character.KARLOS: {
@@ -79,24 +79,24 @@ var position = {
 			},
 		CYCLE_1: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.PAIXLING_1: []
 			},
 		CYCLE_2: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: []
 			},
 		CYCLE_3: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: [],
-			Reputation.OPPOSITION_3: [],
-			Reputation.GOVERNMENT_3: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.CLEMENCIANS_3: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: [],
+			Reputation.PAIXLING_3: []
 			}
 	},
 	Character.HORTENSIA: {
@@ -105,24 +105,24 @@ var position = {
 			},
 		CYCLE_1: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.PAIXLING_1: []
 			},
 		CYCLE_2: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: []
 			},
 		CYCLE_3: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: [],
-			Reputation.OPPOSITION_3: [],
-			Reputation.GOVERNMENT_3: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.CLEMENCIANS_3: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: [],
+			Reputation.PAIXLING_3: []
 			}
 	},
 	Character.LEONIDAS: {
@@ -131,24 +131,24 @@ var position = {
 			},
 		CYCLE_1: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.PAIXLING_1: []
 			},
 		CYCLE_2: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: []
 			},
 		CYCLE_3: {
 			Reputation.NEUTRAL: [],
-			Reputation.OPPOSITION_1: [],
-			Reputation.GOVERNMENT_1: [],
-			Reputation.OPPOSITION_2: [],
-			Reputation.GOVERNMENT_2: [],
-			Reputation.OPPOSITION_3: [],
-			Reputation.GOVERNMENT_3: []
+			Reputation.CLEMENCIANS_1: [],
+			Reputation.CLEMENCIANS_2: [],
+			Reputation.CLEMENCIANS_3: [],
+			Reputation.PAIXLING_1: [],
+			Reputation.PAIXLING_2: [],
+			Reputation.PAIXLING_3: []
 			}
 	}
 }
@@ -169,7 +169,7 @@ var dialogue = {
 				"this is the second dialogue box.",
 				"i am fine with how the negotiations are going."
 			],
-			Reputation.GOVERNMENT_1: [
+			Reputation.CLEMENCIANS_1: [
 				"This is cycle 1 reputation 1C dialogue, which is after day 1 and one towards clemencian reputation.",
 				"I am pleased with how negotiations are going."
 			]
