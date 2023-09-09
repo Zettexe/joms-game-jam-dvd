@@ -10,7 +10,8 @@ func _interact():
 	#minigame_node.show_minigame(minigame_name)
 	#await minigame_node.minigame_done
 	#print("Stopped interacting with %s" % name)
-	Data.current_reputation += 1
+	if Data.current_reputation < 3:
+		Data.current_reputation += 1
 	print(Data.current_reputation)
 	
 	player.unlock_movement()
