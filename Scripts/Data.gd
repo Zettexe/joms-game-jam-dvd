@@ -53,7 +53,7 @@ var dialogue = {
 				"Hi there, I'm Francine! I was supposed to be the Clemencian head negotiator.",
 				"My favorite food is tough beef without salt.",
 				"I'm no nonsense and I believe In The Cause.",
-				".....",
+				"...(and now for the text that was supposed to be)...",
 				"Francine greets you with a brash and assertive demeanor. She extends a firm handshake",
 				"So, you’re the royal chef, huh? I hope your culinary skills are as impressive as they say.",
 				"Let’s get one thing straight right out of the gate: I don’t have time to banter nor time for small talk. My priorities are clear and they don’t involve gourmet meals or fancy desserts.",
@@ -93,7 +93,7 @@ var dialogue = {
 				"Hi there, I'm Karlos. I'm soft spoken but I stand for what I believe is right.",
 				"I'm also a movie nerd 🤓🤓.",
 				"Thanks to Taxen Of Hearts, Zettexe, LanciferP, and crickets for making us come alive.",
-				".....",
+				"...(and now for the text that was supposed to be)...",
 				"It's a pleasure to have you join us. I'm Karlos, and amidst the chaos of war, I believe in seeking harmony. As we navigate these negotiations, I carry the well-being of Clemencian citizens close to my heart.",
 				"Instead of annexation and dragging this bloody conflict on further, I believe war reparations and demilitarization are essential for citizens’ safety and prosperity.",
 				"What I truly hope to achieve is a brighter future for Clemencia, where our people can live in peace, unburdened by conflict. These negotiations offer us that chance, and your culinary skills may help smooth the path to resolution."
@@ -133,7 +133,7 @@ var dialogue = {
 			Reputation.NEUTRAL: [
 				"I am Hortensia Briarheart, but you can just call me Cici! or Rose... our creators never did decide on a nickname.",
 				"I'm a bit of a ditz and airhead but still loveable.",
-				".....",
+				"...(and now for the text that was supposed to be)...",
 				"Hey there! I’m Rose, or Cici! but you can call me Hortensia if you want. Wars are such a bore, don't you think?",
 				"I have a feeling that having you around might just make this whole thing a lot more fun. Negotiations can be such a drag, but with good food and good company, who knows what delightful surprises await us? "
 			],
@@ -176,7 +176,7 @@ var dialogue = {
 			Reputation.NEUTRAL: [
 				"You can call me Leonidas. I am smarter than Hortensia and yet somehow not head negotiator.",
 				"The kids say I have 'rizz'. I think they have a case of not touching grass.",
-				".....",
+				"...(and now for the text that was supposed to be)...",
 				"Greetings. I am Leonidas Zarbounis. While Hortensia may handle the social aspects, I'll ensure our negotiations are strategically sound. Your culinary contributions may prove pivotal. Don't underestimate your role.",
 				"I have clear goals: securing substantial war reparations, demilitarization, and annexation to strengthen Paixling's strategic position. Victory, not comfort, is my primary aim.",
 				"Starting out on the right foot tomorrow is crucial. If you can provide any advantage to our side, I will make sure your valiant efforts are appropriately compensated."

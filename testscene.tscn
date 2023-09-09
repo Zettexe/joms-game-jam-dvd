@@ -514,8 +514,8 @@ offset_bottom = -1080.0
 [node name="PlayerTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/PlayerContainer"]
 layout_mode = 0
 offset_top = 476.0
-offset_right = 396.0
-offset_bottom = 1556.0
+offset_right = 576.0
+offset_bottom = 2104.0
 texture = ExtResource("27_nixdm")
 
 [node name="NPCContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
