@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=55 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://l5fivo3ubsms" path="res://Assets/dial.png" id="3_ry8e3"]
 [ext_resource type="Texture2D" uid="uid://bgs0mlicl24p0" path="res://Assets/negotiationroom_raw.png" id="4_17g80"]
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://Assets/icon.svg" id="4_76lv5"]
+[ext_resource type="Script" path="res://Scripts/Dial.gd" id="4_at052"]
 [ext_resource type="Script" path="res://Scripts/TestNegotiator.gd" id="5_afgmv"]
 [ext_resource type="Texture2D" uid="uid://xl4py0hbg8rl" path="res://Assets/negotiationroom_wall.png" id="5_h5cot"]
 [ext_resource type="Script" path="res://Scripts/CollisionTool.gd" id="5_ou1il"]
@@ -105,6 +106,7 @@ script = ExtResource("1_ng558")
 
 [node name="Node2D" type="Node2D" parent="Camera2D"]
 position = Vector2(1700, 200)
+script = ExtResource("4_at052")
 
 [node name="DialBackground" type="Sprite2D" parent="Camera2D/Node2D"]
 z_index = 3
