@@ -19,19 +19,16 @@ const CHARACTER_NAMES = {
 	Character.LEONIDAS: "Leonidas Zarbounis", 
 	Character.REMY: "Remy Lingweenee" 
 	}
+	
 enum { CYCLE_TUTORIAL, CYCLE_1, CYCLE_2, CYCLE_3 }
 enum Reputation { 
-	OPPOSITION_5 = -5, 
-	OPPOSITION_4 = -4, 
-	OPPOSITION_3 = -3, 
-	OPPOSITION_2 = -2, 
-	OPPOSITION_1 = -1, 
+	CLEMENCIANS_3 = -3, 
+	CLEMENCIANS_2 = -2, 
+	CLEMENCIANS_1 = -1, 
 	NEUTRAL      =  0, 
-	GOVERNMENT_1 =  1,
-	GOVERNMENT_2 =  2,
-	GOVERNMENT_3 =  3,
-	GOVERNMENT_4 =  4,
-	GOVERNMENT_5 =  5
+	PAIXLING_1 =  1,
+	PAIXLING_2 =  2,
+	PAIXLING_3 =  3
 }
 
 enum Minigame{
