@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=57 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -26,13 +26,17 @@
 [ext_resource type="Texture2D" uid="uid://d362e26qnd7f0" path="res://Assets/francine.png" id="18_ysgvx"]
 [ext_resource type="Script" path="res://TestNegotiator2.gd" id="20_yxt2t"]
 [ext_resource type="Texture2D" uid="uid://daucmwgdh8qi4" path="res://Assets/karlos.png" id="21_8633y"]
+[ext_resource type="Texture2D" uid="uid://cg6wq6bd48smo" path="res://Assets/francine_logo.png" id="21_hejg5"]
 [ext_resource type="Script" path="res://TestNegotiator3.gd" id="21_lbcrj"]
 [ext_resource type="Script" path="res://Sprite2D.gd" id="22_61o3k"]
 [ext_resource type="Texture2D" uid="uid://dingp3uim1vxk" path="res://Assets/hortensia_wip.png" id="24_7wpuv"]
 [ext_resource type="Script" path="res://Scripts/SliceMeat.gd" id="24_o8ud4"]
 [ext_resource type="Texture2D" uid="uid://cccl1jpnn5kxv" path="res://Assets/leonidas.png" id="25_r1tqy"]
+[ext_resource type="Texture2D" uid="uid://buy6w2yl1xh6b" path="res://Assets/karlos_logo.png" id="25_se5yo"]
 [ext_resource type="Script" path="res://LEONIDAS.gd" id="25_tvxy3"]
 [ext_resource type="Texture2D" uid="uid://c1suifex32wme" path="res://Assets/chef.png" id="27_nixdm"]
+[ext_resource type="Texture2D" uid="uid://b2tdc2a1urmb1" path="res://Assets/hortensia_logo.png" id="29_na0yf"]
+[ext_resource type="Texture2D" uid="uid://d1cut41h7ehw7" path="res://Assets/leonidas_logo.png" id="32_du5tm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
@@ -266,6 +270,7 @@ position = Vector2(490, 1467)
 shape = SubResource("RectangleShape2D_uqvr0")
 
 [node name="OvenCollision" type="CollisionShape2D" parent="Rooms"]
+visible = false
 position = Vector2(808, 482)
 shape = SubResource("RectangleShape2D_kb5tc")
 
@@ -288,6 +293,7 @@ position = Vector2(1808, 789.5)
 shape = SubResource("RectangleShape2D_jl2le")
 
 [node name="FridgeCollision" type="CollisionShape2D" parent="Rooms"]
+visible = false
 position = Vector2(328, 482)
 shape = SubResource("RectangleShape2D_owjmt")
 
@@ -401,7 +407,7 @@ radius_y = 96
 
 [node name="Sprite2D" type="Sprite2D" parent="FRANCINE"]
 position = Vector2(-659, 426)
-texture = ExtResource("4_76lv5")
+texture = ExtResource("21_hejg5")
 script = ExtResource("7_rasr7")
 
 [node name="KARLOS" type="StaticBody2D" parent="."]
@@ -428,7 +434,7 @@ radius_y = 96
 
 [node name="Sprite2D" type="Sprite2D" parent="KARLOS"]
 position = Vector2(-2, -73)
-texture = ExtResource("4_76lv5")
+texture = ExtResource("25_se5yo")
 script = ExtResource("22_61o3k")
 
 [node name="HORTENSIA" type="StaticBody2D" parent="."]
@@ -455,7 +461,7 @@ radius_y = 96
 
 [node name="Sprite2D" type="Sprite2D" parent="HORTENSIA"]
 position = Vector2(0, -66)
-texture = ExtResource("4_76lv5")
+texture = ExtResource("29_na0yf")
 script = ExtResource("7_rasr7")
 
 [node name="LEONIDAS" type="StaticBody2D" parent="."]
@@ -484,7 +490,7 @@ radius_y = 96
 
 [node name="Sprite2D" type="Sprite2D" parent="LEONIDAS"]
 position = Vector2(0.999939, 5)
-texture = ExtResource("4_76lv5")
+texture = ExtResource("32_du5tm")
 script = ExtResource("7_rasr7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
