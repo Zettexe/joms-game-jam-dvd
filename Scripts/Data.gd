@@ -11,7 +11,14 @@ enum Character {
 	LEONIDAS,
 	REMY
 }
-const CHARACTER_NAMES = { Character.NONE: "This is a bug", Character.FRANCINE: "Francine", Character.KARLOS: "Karlos", Character.HORTENSIA: "Hortensia Briarheart", Character.LEONIDAS: "Leonidas Zarbounis", Character.REMY: "Remy Lingweenee" }
+const CHARACTER_NAMES = { 
+	Character.NONE: "This is a bug", 
+	Character.FRANCINE: "Francine", 
+	Character.KARLOS: "Karlos", 
+	Character.HORTENSIA: "Hortensia Briarheart", 
+	Character.LEONIDAS: "Leonidas Zarbounis", 
+	Character.REMY: "Remy Lingweenee" 
+	}
 enum { CYCLE_TUTORIAL, CYCLE_1, CYCLE_2, CYCLE_3 }
 enum Reputation { 
 	OPPOSITION_5 = -5, 
@@ -42,11 +49,121 @@ var instructions = {
 		"Cut the steak into 8 slices as evenly as possible."
 }
 
+var position = {
+	Character.FRANCINE: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [0, -64]
+			},
+		CYCLE_1: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: []
+		},
+		CYCLE_2: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: []
+		},
+		CYCLE_3: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: [],
+			Reputation.OPPOSITION_3: [],
+			Reputation.GOVERNMENT_3: []
+		}
+	},
+	Character.KARLOS: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [0, -69]
+			},
+		CYCLE_1: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: []
+			},
+		CYCLE_2: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: []
+			},
+		CYCLE_3: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: [],
+			Reputation.OPPOSITION_3: [],
+			Reputation.GOVERNMENT_3: []
+			}
+	},
+	Character.HORTENSIA: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [0, -66]
+			},
+		CYCLE_1: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: []
+			},
+		CYCLE_2: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: []
+			},
+		CYCLE_3: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: [],
+			Reputation.OPPOSITION_3: [],
+			Reputation.GOVERNMENT_3: []
+			}
+	},
+	Character.LEONIDAS: {
+		CYCLE_TUTORIAL: {
+			Reputation.NEUTRAL: [-660, 433]
+			},
+		CYCLE_1: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: []
+			},
+		CYCLE_2: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: []
+			},
+		CYCLE_3: {
+			Reputation.NEUTRAL: [],
+			Reputation.OPPOSITION_1: [],
+			Reputation.GOVERNMENT_1: [],
+			Reputation.OPPOSITION_2: [],
+			Reputation.GOVERNMENT_2: [],
+			Reputation.OPPOSITION_3: [],
+			Reputation.GOVERNMENT_3: []
+			}
+	}
+}
+
 var dialogue = {
 	Character.FRANCINE: {
 		CYCLE_TUTORIAL: {
 			Reputation.NEUTRAL: [
-				"this is cycle 0 reputation 0 dialogue, which is when the PC first interacts with this character."
+				"Hi there, I'm Francine! I was supposed to be the Clemencian head negotiator.",
+				"My favorite food is tough beef without salt.",
+				"I'm no nonsense and I believe In The Cause.",
+				"Nice to meet you."
 			]
 		},
 		CYCLE_1: {
@@ -64,24 +181,25 @@ var dialogue = {
 	Character.KARLOS: {
 		CYCLE_TUTORIAL: {
 			Reputation.NEUTRAL: [
-				"I am karlos",
-				"text box 2"
+				"Hi there, I'm Karlos. I'm soft spoken but I stand for what I believe is right.",
+				"I'm also a movie nerd 🤓🤓.",
+				"Thanks to Taxen Of Hearts, Zettexe, LanciferP, and crickets for making us come alive."
 			]
 		}
 	},
 	Character.HORTENSIA: {
 		CYCLE_TUTORIAL: {
 			Reputation.NEUTRAL: [
-				"I am hortensia",
-				"text box 2"
+				"I am Hortensia Briarheart, but you can just call me Cici! or Rose... our creators never did decide on a nickname.",
+				"I'm a bit of a ditz and airhead but still loveable."
 			]
 		}
 	},
 	Character.LEONIDAS: {
 		CYCLE_TUTORIAL: {
 			Reputation.NEUTRAL: [
-				"I am leonidas",
-				"text box 2"
+				"You can call me Leonidas. I am smarter than Hortensia and yet somehow not head negotiator.",
+				"The kids say I have 'rizz'. I think they have a case of not touching grass."
 			]
 		}
 	}
