@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=52 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/CollisionTool.gd" id="5_ou1il"]
 [ext_resource type="Texture2D" uid="uid://cmbb5b3djr83t" path="res://Assets/table.png" id="6_af1wf"]
 [ext_resource type="Script" path="res://Scripts/TestStationCollision.gd" id="6_ohfra"]
+[ext_resource type="Script" path="res://Scripts/TestStationOven.gd" id="6_yle4b"]
 [ext_resource type="Texture2D" uid="uid://cf6f3kp7aq64t" path="res://Assets/Chair1.png" id="7_jrws1"]
 [ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
 [ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
@@ -252,7 +253,7 @@ shape = SubResource("RectangleShape2D_uqvr0")
 [node name="OvenCollision" type="CollisionShape2D" parent="Rooms"]
 position = Vector2(808, 482)
 shape = SubResource("RectangleShape2D_kb5tc")
-script = ExtResource("6_ohfra")
+script = ExtResource("6_yle4b")
 minigame_name = 1
 
 [node name="MinigameArea" type="Area2D" parent="Rooms/OvenCollision"]
