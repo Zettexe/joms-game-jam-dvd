@@ -1,23 +1,44 @@
-[gd_scene load_steps=23 format=3 uid="uid://brgrsysnaaia8"]
+[gd_scene load_steps=51 format=3 uid="uid://brgrsysnaaia8"]
 
 [ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
 [ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
+[ext_resource type="Texture2D" uid="uid://c1hr7puwe85np" path="res://Assets/kitchen_background.png" id="2_ku4m6"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="3_evedd"]
+[ext_resource type="Texture2D" uid="uid://bgs0mlicl24p0" path="res://Assets/negotiationroom_raw.png" id="4_17g80"]
 [ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://Assets/icon.svg" id="4_76lv5"]
 [ext_resource type="Script" path="res://Scripts/TestNegotiator.gd" id="5_afgmv"]
-[ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://Assets/fanderson_stare.png" id="6_51i6e"]
+[ext_resource type="Texture2D" uid="uid://xl4py0hbg8rl" path="res://Assets/negotiationroom_wall.png" id="5_h5cot"]
+[ext_resource type="Script" path="res://Scripts/CollisionTool.gd" id="5_ou1il"]
+[ext_resource type="Texture2D" uid="uid://cmbb5b3djr83t" path="res://Assets/table.png" id="6_af1wf"]
+[ext_resource type="Script" path="res://Scripts/TestStationCollision.gd" id="6_ohfra"]
+[ext_resource type="Texture2D" uid="uid://cf6f3kp7aq64t" path="res://Assets/Chair1.png" id="7_jrws1"]
 [ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
 [ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
+[ext_resource type="Texture2D" uid="uid://dwe5qc61apb6a" path="res://Assets/Chair2.png" id="8_11svf"]
+[ext_resource type="Texture2D" uid="uid://da2bjdmw47f5c" path="res://Assets/Chair3.png" id="9_64m3k"]
 [ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
-[ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
+[ext_resource type="Texture2D" uid="uid://hadfvqjx0a1c" path="res://Assets/Chair4.png" id="10_mtiu6"]
+[ext_resource type="Texture2D" uid="uid://b2087uqqq0y3" path="res://Assets/Bookshelf.png" id="11_g0br0"]
+[ext_resource type="Texture2D" uid="uid://clvbv2m83olbo" path="res://Assets/Couch.png" id="12_f8asf"]
+[ext_resource type="Script" path="res://Scripts/Minigame.gd" id="14_rjkqa"]
+[ext_resource type="Texture2D" uid="uid://d362e26qnd7f0" path="res://Assets/francine.png" id="18_ysgvx"]
+[ext_resource type="Script" path="res://TestNegotiator2.gd" id="20_yxt2t"]
+[ext_resource type="Texture2D" uid="uid://daucmwgdh8qi4" path="res://Assets/karlos.png" id="21_8633y"]
+[ext_resource type="Script" path="res://TestNegotiator3.gd" id="21_lbcrj"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="22_61o3k"]
+[ext_resource type="Texture2D" uid="uid://dingp3uim1vxk" path="res://Assets/hortensia_wip.png" id="24_7wpuv"]
+[ext_resource type="Script" path="res://Scripts/SliceMeat.gd" id="24_o8ud4"]
+[ext_resource type="Texture2D" uid="uid://cccl1jpnn5kxv" path="res://Assets/leonidas.png" id="25_r1tqy"]
+[ext_resource type="Script" path="res://LEONIDAS.gd" id="25_tvxy3"]
+[ext_resource type="Texture2D" uid="uid://c1suifex32wme" path="res://Assets/chef.png" id="27_nixdm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hh00"]
-size = Vector2(120, 70)
+size = Vector2(232, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqdc0"]
-size = Vector2(1440, 70)
+size = Vector2(1476, 24)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ugtui"]
 normal = Vector2(0, 1)
@@ -30,29 +51,51 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vwj7x"]
 normal = Vector2(-1, 0)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mpehq"]
-radius = 64.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv24q"]
+size = Vector2(368, 84)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cmwi"]
-size = Vector2(534, 245)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn833"]
+size = Vector2(208, 108)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qid7x"]
-radius = 64.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q8mw"]
+size = Vector2(174, 399)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lgx8n"]
-radius = 128.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmncg"]
+size = Vector2(96, 52.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbl0f"]
+size = Vector2(350, 368)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dl0u"]
+size = Vector2(133, 265)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqvr0"]
+size = Vector2(106, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb5tc"]
+size = Vector2(240, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om7mq"]
+size = Vector2(872, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl2le"]
+size = Vector2(144, 531)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owjmt"]
+size = Vector2(192, 84)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4aft"]
 bg_color = Color(1, 1, 1, 0)
 
 [node name="Node2D" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 limit_left = 0
 limit_top = 0
 limit_right = 1920
-limit_bottom = 2130
+limit_bottom = 1720
 position_smoothing_speed = 7.0
 editor_draw_limits = true
 script = ExtResource("1_ng558")
@@ -83,20 +126,13 @@ texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Floor" type="Sprite2D" parent="Rooms/Kitchen"]
-position = Vector2(50, 50)
+position = Vector2(40, 88)
 scale = Vector2(910, 490)
 texture = ExtResource("2_2rncu")
 centered = false
 
 [node name="Other" type="Node2D" parent="Rooms"]
 position = Vector2(0, 1050)
-
-[node name="OtherArea" type="Area2D" parent="Rooms/Other"]
-position = Vector2(960, 540)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Other/OtherArea"]
-scale = Vector2(91, 49)
-shape = SubResource("RectangleShape2D_qtc5e")
 
 [node name="WallTop" type="Sprite2D" parent="Rooms/Other"]
 modulate = Color(0.596078, 0.596078, 0.596078, 1)
@@ -117,6 +153,13 @@ scale = Vector2(910, 490)
 texture = ExtResource("2_2rncu")
 centered = false
 
+[node name="OtherArea" type="Area2D" parent="Rooms/Other"]
+position = Vector2(960, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Other/OtherArea"]
+scale = Vector2(91, 49)
+shape = SubResource("RectangleShape2D_qtc5e")
+
 [node name="Door" type="Node2D" parent="Rooms"]
 position = Vector2(300, 1065)
 
@@ -129,32 +172,169 @@ texture = ExtResource("2_2rncu")
 scale = Vector2(130, 35)
 texture = ExtResource("2_2rncu")
 
+[node name="Kitchen2" type="Sprite2D" parent="Rooms"]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_ku4m6")
+centered = false
+
+[node name="NegotiationRoom" type="Sprite2D" parent="Rooms"]
+texture_filter = 1
+position = Vector2(0, 640)
+scale = Vector2(4, 4)
+texture = ExtResource("4_17g80")
+centered = false
+
+[node name="Wall" type="Sprite2D" parent="Rooms/NegotiationRoom" groups=["NegotiationWall"]]
+texture = ExtResource("5_h5cot")
+centered = false
+
 [node name="LeftDoorCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(110, 1065)
+position = Vector2(116, 1067.5)
 shape = SubResource("RectangleShape2D_3hh00")
 
 [node name="RightDoorCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(1150, 1065)
+position = Vector2(1182, 1068)
 shape = SubResource("RectangleShape2D_dqdc0")
 
 [node name="TopWallCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(960, 50)
+position = Vector2(960, 440)
 shape = SubResource("WorldBoundaryShape2D_ugtui")
 
 [node name="BottomWallCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(960, 2080)
+position = Vector2(960, 1720)
 shape = SubResource("WorldBoundaryShape2D_uxpii")
 
 [node name="LeftWallCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(50, 1065)
+position = Vector2(16, 1065)
 shape = SubResource("WorldBoundaryShape2D_iqt8x")
 
 [node name="RightWallCollision" type="CollisionShape2D" parent="Rooms"]
-position = Vector2(1870, 1065)
+position = Vector2(1904, 1065)
 shape = SubResource("WorldBoundaryShape2D_vwj7x")
+
+[node name="BookshelfCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(824, 1122)
+shape = SubResource("RectangleShape2D_hv24q")
+
+[node name="CouchCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1368, 1134)
+shape = SubResource("RectangleShape2D_fn833")
+
+[node name="CouchCollision2" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1616, 1279.5)
+shape = SubResource("RectangleShape2D_6q8mw")
+
+[node name="CouchCollision3" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1120, 1280)
+shape = SubResource("RectangleShape2D_6q8mw")
+
+[node name="CoathangerCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1800, 1106.12)
+shape = SubResource("RectangleShape2D_lmncg")
+
+[node name="TableCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(320, 1384)
+shape = SubResource("RectangleShape2D_rbl0f")
+
+[node name="ChairCollision1" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(82.5, 1371.5)
+shape = SubResource("RectangleShape2D_4dl0u")
+
+[node name="ChairCollision2" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(493, 1283)
+shape = SubResource("RectangleShape2D_uqvr0")
+
+[node name="ChairCollision3" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(490, 1467)
+shape = SubResource("RectangleShape2D_uqvr0")
+
+[node name="OvenCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(808, 482)
+shape = SubResource("RectangleShape2D_kb5tc")
+script = ExtResource("6_ohfra")
+minigame_name = 1
+
+[node name="MinigameArea" type="Area2D" parent="Rooms/OvenCollision"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Rooms/OvenCollision/MinigameArea"]
+polygon = PackedVector2Array(99, 0, 95.6267, 24.8466, 85.7365, 48, 70.0036, 67.8822, 49.5, 83.1384, 25.6231, 92.7289, 6.0618e-15, 96, -25.6231, 92.7289, -49.5, 83.1384, -70.0036, 67.8822, -85.7365, 48, -95.6267, 24.8466, -99, 1.17562e-14, -95.6267, -24.8466, -85.7365, -48, -70.0036, -67.8822, -49.5, -83.1384, -25.6231, -92.7289, -1.81854e-14, -96, 25.6231, -92.7289, 49.5, -83.1384, 70.0036, -67.8822, 85.7365, -48, 95.6267, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 99
+radius_y = 96
+
+[node name="CounterCollision1" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1444, 482)
+shape = SubResource("RectangleShape2D_om7mq")
+
+[node name="CounterCollision2" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1808, 789.5)
+shape = SubResource("RectangleShape2D_jl2le")
+
+[node name="FridgeCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(328, 482)
+shape = SubResource("RectangleShape2D_owjmt")
+script = ExtResource("6_ohfra")
+minigame_name = 1
+
+[node name="MinigameArea" type="Area2D" parent="Rooms/FridgeCollision"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Rooms/FridgeCollision/MinigameArea"]
+polygon = PackedVector2Array(99, 0, 95.6267, 24.8466, 85.7365, 48, 70.0036, 67.8822, 49.5, 83.1384, 25.6231, 92.7289, 6.0618e-15, 96, -25.6231, 92.7289, -49.5, 83.1384, -70.0036, 67.8822, -85.7365, 48, -95.6267, 24.8466, -99, 1.17562e-14, -95.6267, -24.8466, -85.7365, -48, -70.0036, -67.8822, -49.5, -83.1384, -25.6231, -92.7289, -1.81854e-14, -96, 25.6231, -92.7289, 49.5, -83.1384, 70.0036, -67.8822, 85.7365, -48, 95.6267, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 99
+radius_y = 96
+
+[node name="Table Set" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(320, 1340)
+scale = Vector2(4, 4)
+texture = ExtResource("6_af1wf")
+
+[node name="Chair" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(100, 1204)
+scale = Vector2(4, 4)
+texture = ExtResource("7_jrws1")
+
+[node name="Chair2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(90, 1392)
+scale = Vector2(4, 4)
+texture = ExtResource("8_11svf")
+
+[node name="Chair3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(510, 1210)
+scale = Vector2(4, 4)
+texture = ExtResource("9_64m3k")
+
+[node name="Chair4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(530, 1388)
+scale = Vector2(4, 4)
+texture = ExtResource("10_mtiu6")
+
+[node name="Bookshelf" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(824, 976)
+scale = Vector2(4, 4)
+texture = ExtResource("11_g0br0")
+
+[node name="Couch" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(1368, 1060)
+scale = Vector2(4, 4)
+texture = ExtResource("12_f8asf")
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
 process_priority = -100
+y_sort_enabled = true
 position = Vector2(681, 1533)
 collision_layer = 3
 collision_mask = 3
@@ -162,87 +342,138 @@ motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("3_evedd")
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CircleShape2D_mpehq")
-
-[node name="Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource("4_76lv5")
+[node name="PlayerCollision" type="CollisionPolygon2D" parent="Player"]
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+script = ExtResource("5_ou1il")
+radius_x = 64
+radius_y = 48
 
 [node name="PlayerArea" type="Area2D" parent="Player"]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerArea"]
-shape = SubResource("CircleShape2D_mpehq")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Player/PlayerArea"]
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+script = ExtResource("5_ou1il")
+radius_x = 64
+radius_y = 48
 
-[node name="Table" type="StaticBody2D" parent="."]
-position = Vector2(1023, 1467)
+[node name="Sprite" type="Sprite2D" parent="Player"]
+y_sort_enabled = true
+position = Vector2(2, -72)
+texture = ExtResource("4_76lv5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Table"]
-modulate = Color(0.529412, 0.321569, 0.156863, 1)
-position = Vector2(266, 122)
-scale = Vector2(267, 123)
-texture = ExtResource("2_2rncu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
-position = Vector2(266, 121.5)
-shape = SubResource("RectangleShape2D_2cmwi")
-
-[node name="TestNegotiator" type="StaticBody2D" parent="."]
-position = Vector2(1093, 1377)
+[node name="FRANCINE" type="StaticBody2D" parent="."]
+position = Vector2(1154, 1186)
 script = ExtResource("5_afgmv")
 npc_name = 1
-npc_texture = ExtResource("6_51i6e")
+npc_texture = ExtResource("18_ysgvx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator"]
-shape = SubResource("CircleShape2D_qid7x")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="FRANCINE"]
+position = Vector2(-659, 435)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+script = ExtResource("5_ou1il")
+radius_x = 64
+radius_y = 48
 
-[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator"]
-texture = ExtResource("4_76lv5")
-script = ExtResource("7_rasr7")
-
-[node name="DialogueArea" type="Area2D" parent="TestNegotiator"]
+[node name="DialogueArea" type="Area2D" parent="FRANCINE"]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator/DialogueArea"]
-shape = SubResource("CircleShape2D_lgx8n")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="FRANCINE/DialogueArea"]
+position = Vector2(-665, 438)
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 128
+radius_y = 96
 
-[node name="TestNegotiator2" type="StaticBody2D" parent="."]
-position = Vector2(1268, 1375)
-script = ExtResource("5_afgmv")
-npc_texture = ExtResource("8_1bh20")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2"]
-shape = SubResource("CircleShape2D_qid7x")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator2"]
+[node name="Sprite2D" type="Sprite2D" parent="FRANCINE"]
+position = Vector2(-659, 426)
 texture = ExtResource("4_76lv5")
 script = ExtResource("7_rasr7")
 
-[node name="DialogueArea" type="Area2D" parent="TestNegotiator2"]
+[node name="KARLOS" type="StaticBody2D" parent="."]
+position = Vector2(1590, 1327)
+script = ExtResource("21_lbcrj")
+npc_name = 2
+npc_texture = ExtResource("21_8633y")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="KARLOS"]
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+script = ExtResource("5_ou1il")
+radius_x = 64
+radius_y = 48
+
+[node name="DialogueArea" type="Area2D" parent="KARLOS"]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2/DialogueArea"]
-shape = SubResource("CircleShape2D_lgx8n")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="KARLOS/DialogueArea"]
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 128
+radius_y = 96
 
-[node name="TestNegotiator3" type="StaticBody2D" parent="."]
-position = Vector2(1462, 1373)
+[node name="Sprite2D" type="Sprite2D" parent="KARLOS"]
+position = Vector2(-2, -73)
+texture = ExtResource("4_76lv5")
+script = ExtResource("22_61o3k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3"]
-shape = SubResource("CircleShape2D_qid7x")
+[node name="HORTENSIA" type="StaticBody2D" parent="."]
+position = Vector2(1370, 1101)
+script = ExtResource("20_yxt2t")
+npc_name = 3
+npc_texture = ExtResource("24_7wpuv")
 
-[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator3"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HORTENSIA"]
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+script = ExtResource("5_ou1il")
+radius_x = 64
+radius_y = 48
+
+[node name="DialogueArea" type="Area2D" parent="HORTENSIA"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="HORTENSIA/DialogueArea"]
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 128
+radius_y = 96
+
+[node name="Sprite2D" type="Sprite2D" parent="HORTENSIA"]
+position = Vector2(0, -66)
 texture = ExtResource("4_76lv5")
 script = ExtResource("7_rasr7")
 
-[node name="DialogueArea" type="Area2D" parent="TestNegotiator3"]
+[node name="LEONIDAS" type="StaticBody2D" parent="."]
+position = Vector2(1154, 1186)
+script = ExtResource("25_tvxy3")
+npc_name = 4
+npc_texture = ExtResource("25_r1tqy")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LEONIDAS"]
+position = Vector2(1, 4)
+polygon = PackedVector2Array(64, 0, 61.8193, 12.4233, 55.4256, 24, 45.2548, 33.9411, 32, 41.5692, 16.5644, 46.3644, 3.91874e-15, 48, -16.5644, 46.3644, -32, 41.5692, -45.2548, 33.9411, -55.4256, 24, -61.8193, 12.4233, -64, 5.87811e-15, -61.8193, -12.4233, -55.4256, -24, -45.2548, -33.9411, -32, -41.5692, -16.5644, -46.3644, -1.17562e-14, -48, 16.5644, -46.3644, 32, -41.5692, 45.2548, -33.9411, 55.4256, -24, 61.8193, -12.4233)
+script = ExtResource("5_ou1il")
+radius_x = 64
+radius_y = 48
+
+[node name="DialogueArea" type="Area2D" parent="LEONIDAS"]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3/DialogueArea"]
-shape = SubResource("CircleShape2D_lgx8n")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="LEONIDAS/DialogueArea"]
+position = Vector2(0.999939, 8)
+polygon = PackedVector2Array(128, 0, 123.639, 24.8466, 110.851, 48, 90.5097, 67.8822, 64, 83.1384, 33.1288, 92.7289, 7.83748e-15, 96, -33.1288, 92.7289, -64, 83.1384, -90.5097, 67.8822, -110.851, 48, -123.639, 24.8466, -128, 1.17562e-14, -123.639, -24.8466, -110.851, -48, -90.5097, -67.8822, -64, -83.1384, -33.1288, -92.7289, -2.35124e-14, -96, 33.1288, -92.7289, 64, -83.1384, 90.5097, -67.8822, 110.851, -48, 123.639, -24.8466)
+script = ExtResource("5_ou1il")
+radius_x = 128
+radius_y = 96
+
+[node name="Sprite2D" type="Sprite2D" parent="LEONIDAS"]
+position = Vector2(0.999939, 5)
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -265,9 +496,9 @@ offset_bottom = -1080.0
 [node name="PlayerTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/PlayerContainer"]
 layout_mode = 0
 offset_top = 476.0
-offset_right = 602.0
-offset_bottom = 1153.0
-texture = ExtResource("10_2icuy")
+offset_right = 396.0
+offset_bottom = 1556.0
+texture = ExtResource("27_nixdm")
 
 [node name="NPCContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
 layout_mode = 1
@@ -281,10 +512,10 @@ offset_bottom = -1080.0
 [node name="NPCTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/NPCContainer"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 1260.0
-offset_top = 399.0
-offset_right = 2078.0
-offset_bottom = 1196.0
+offset_left = 1161.0
+offset_top = 319.0
+offset_right = 1979.0
+offset_bottom = 1116.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("8_1bh20")
@@ -357,15 +588,109 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
+[node name="MinigameLayer" type="CanvasLayer" parent="."]
+
+[node name="MinigameBackground" type="Panel" parent="MinigameLayer" groups=["Minigame"]]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_rjkqa")
+
+[node name="InstructionsContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
+layout_mode = 2
+anchors_preset = 0
+
+[node name="Title" type="Panel" parent="MinigameLayer/MinigameBackground/InstructionsContainer"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 100.0
+
+[node name="Label" type="Label" parent="MinigameLayer/MinigameBackground/InstructionsContainer/Title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 31
+text = "You Shouldn't See This
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Instructions" type="Panel" parent="MinigameLayer/MinigameBackground/InstructionsContainer"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1309.0
+offset_top = 353.0
+offset_right = 1709.0
+offset_bottom = 753.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Content" type="RichTextLabel" parent="MinigameLayer/MinigameBackground/InstructionsContainer/Instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+scroll_active = false
+scroll_following = true
+
+[node name="MinigameContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = -700.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SliceMeat" type="Panel" parent="MinigameLayer/MinigameBackground/MinigameContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_o8ud4")
+
 [connection signal="area_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
 [connection signal="body_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
 [connection signal="area_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
 [connection signal="body_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
+[connection signal="body_entered" from="Rooms/OvenCollision/MinigameArea" to="FRANCINE/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Rooms/OvenCollision/MinigameArea" to="FRANCINE/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="Rooms/FridgeCollision/MinigameArea" to="FRANCINE/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Rooms/FridgeCollision/MinigameArea" to="FRANCINE/Sprite2D" method="_on_dialogue_area_body_exited"]
 [connection signal="area_entered" from="Player/PlayerArea" to="Player" method="_on_player_area_entered"]
 [connection signal="area_exited" from="Player/PlayerArea" to="Player" method="_on_player_area_exited"]
-[connection signal="body_entered" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_entered"]
-[connection signal="body_exited" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_exited"]
-[connection signal="body_entered" from="TestNegotiator2/DialogueArea" to="TestNegotiator2/Sprite2D" method="_on_dialogue_area_body_entered"]
-[connection signal="body_exited" from="TestNegotiator2/DialogueArea" to="TestNegotiator2/Sprite2D" method="_on_dialogue_area_body_exited"]
-[connection signal="body_entered" from="TestNegotiator3/DialogueArea" to="TestNegotiator3/Sprite2D" method="_on_dialogue_area_body_entered"]
-[connection signal="body_exited" from="TestNegotiator3/DialogueArea" to="TestNegotiator3/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="FRANCINE/DialogueArea" to="FRANCINE/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="FRANCINE/DialogueArea" to="FRANCINE/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="KARLOS/DialogueArea" to="KARLOS/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="KARLOS/DialogueArea" to="KARLOS/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="HORTENSIA/DialogueArea" to="HORTENSIA/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="HORTENSIA/DialogueArea" to="HORTENSIA/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="LEONIDAS/DialogueArea" to="LEONIDAS/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="LEONIDAS/DialogueArea" to="LEONIDAS/Sprite2D" method="_on_dialogue_area_body_exited"]

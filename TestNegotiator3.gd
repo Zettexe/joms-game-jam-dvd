@@ -6,7 +6,7 @@ extends StaticBody2D
 @onready var dialogue_node = get_tree().get_first_node_in_group("Dialogue")
 
 func _interact():
-	npc_name = Data.Character.FRANCINE
+	npc_name = Data.Character.KARLOS
 	print("Interacted with %s" % Data.CHARACTER_NAMES[npc_name])
 	player.lock_movement()
 	dialogue_node.show_dialogue(npc_texture, npc_name)

@@ -1,0 +1,576 @@
+[gd_scene load_steps=29 format=3 uid="uid://brgrsysnaaia8"]
+
+[ext_resource type="Script" path="res://Scripts/MoveCamera.gd" id="1_ng558"]
+[ext_resource type="Texture2D" uid="uid://di4omge6xef6y" path="res://Assets/placeholder.png" id="2_2rncu"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="3_evedd"]
+[ext_resource type="Texture2D" uid="uid://p1hsv8sw3nir" path="res://Assets/icon.svg" id="4_76lv5"]
+[ext_resource type="Script" path="res://Scripts/TestNegotiator.gd" id="5_afgmv"]
+[ext_resource type="Texture2D" uid="uid://dfo28cncl8yb" path="res://Assets/fanderson_stare.png" id="6_51i6e"]
+[ext_resource type="Script" path="res://Scripts/NegotiatorDebug.gd" id="7_rasr7"]
+[ext_resource type="Texture2D" uid="uid://v05tlkiek7p6" path="res://Assets/Anderson_Stare.png" id="8_1bh20"]
+[ext_resource type="Script" path="res://TestStation.gd" id="9_k2q66"]
+[ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="9_skd70"]
+[ext_resource type="Texture2D" uid="uid://bv8fvhqmqijla" path="res://Assets/confusedguy.png" id="10_2icuy"]
+[ext_resource type="Texture2D" uid="uid://c87cfnfx8j0b3" path="res://Assets/1580893542chef-hat-freesvg.org.svg" id="10_4bysy"]
+[ext_resource type="Script" path="res://Scripts/FridgeDebug.gd" id="10_r5lkx"]
+[ext_resource type="Script" path="res://Scripts/Minigame.gd" id="14_rjkqa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtc5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hh00"]
+size = Vector2(120, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqdc0"]
+size = Vector2(1440, 70)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ugtui"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uxpii"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iqt8x"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vwj7x"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpehq"]
+radius = 64.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cmwi"]
+size = Vector2(534, 240)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qid7x"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgx8n"]
+radius = 128.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcwyc"]
+size = Vector2(182, 186)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x38ga"]
+radius = 94.0053
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4aft"]
+bg_color = Color(1, 1, 1, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 2130
+position_smoothing_speed = 7.0
+editor_draw_limits = true
+script = ExtResource("1_ng558")
+
+[node name="Rooms" type="StaticBody2D" parent="."]
+
+[node name="Kitchen" type="Node2D" parent="Rooms"]
+
+[node name="KitchenArea" type="Area2D" parent="Rooms/Kitchen"]
+position = Vector2(960, 540)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Kitchen/KitchenArea"]
+scale = Vector2(91, 49)
+shape = SubResource("RectangleShape2D_qtc5e")
+
+[node name="WallTop" type="Sprite2D" parent="Rooms/Kitchen"]
+modulate = Color(0.596078, 0.596078, 0.596078, 1)
+scale = Vector2(960, 540)
+texture = ExtResource("2_2rncu")
+centered = false
+
+[node name="Shadow" type="Sprite2D" parent="Rooms/Kitchen"]
+modulate = Color(0.529412, 0.529412, 0.529412, 1)
+position = Vector2(30, 30)
+scale = Vector2(930, 510)
+texture = ExtResource("2_2rncu")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(40, 88)
+scale = Vector2(910, 490)
+texture = ExtResource("2_2rncu")
+centered = false
+
+[node name="Other" type="Node2D" parent="Rooms"]
+position = Vector2(0, 1050)
+
+[node name="OtherArea" type="Area2D" parent="Rooms/Other"]
+position = Vector2(960, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Other/OtherArea"]
+scale = Vector2(91, 49)
+shape = SubResource("RectangleShape2D_qtc5e")
+
+[node name="WallTop" type="Sprite2D" parent="Rooms/Other"]
+modulate = Color(0.596078, 0.596078, 0.596078, 1)
+scale = Vector2(960, 540)
+texture = ExtResource("2_2rncu")
+centered = false
+
+[node name="Shadow" type="Sprite2D" parent="Rooms/Other"]
+modulate = Color(0.529412, 0.529412, 0.529412, 1)
+position = Vector2(30, 30)
+scale = Vector2(930, 510)
+texture = ExtResource("2_2rncu")
+centered = false
+
+[node name="Floor" type="Sprite2D" parent="Rooms/Other"]
+position = Vector2(50, 50)
+scale = Vector2(910, 490)
+texture = ExtResource("2_2rncu")
+centered = false
+
+[node name="Door" type="Node2D" parent="Rooms"]
+position = Vector2(300, 1065)
+
+[node name="Shadow" type="Sprite2D" parent="Rooms/Door"]
+modulate = Color(0.529412, 0.529412, 0.529412, 1)
+scale = Vector2(150, 35)
+texture = ExtResource("2_2rncu")
+
+[node name="Floor" type="Sprite2D" parent="Rooms/Door"]
+scale = Vector2(130, 35)
+texture = ExtResource("2_2rncu")
+
+[node name="LeftDoorCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(110, 1065)
+shape = SubResource("RectangleShape2D_3hh00")
+
+[node name="RightDoorCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1150, 1065)
+shape = SubResource("RectangleShape2D_dqdc0")
+
+[node name="TopWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(960, 50)
+shape = SubResource("WorldBoundaryShape2D_ugtui")
+
+[node name="BottomWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(960, 2080)
+shape = SubResource("WorldBoundaryShape2D_uxpii")
+
+[node name="LeftWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(50, 1065)
+shape = SubResource("WorldBoundaryShape2D_iqt8x")
+
+[node name="RightWallCollision" type="CollisionShape2D" parent="Rooms"]
+position = Vector2(1870, 1065)
+shape = SubResource("WorldBoundaryShape2D_vwj7x")
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+process_priority = -100
+position = Vector2(681, 1533)
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("3_evedd")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_mpehq")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("4_76lv5")
+
+[node name="PlayerArea" type="Area2D" parent="Player"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerArea"]
+shape = SubResource("CircleShape2D_mpehq")
+
+[node name="Table" type="StaticBody2D" parent="."]
+position = Vector2(1023, 1467)
+
+[node name="Sprite2D" type="Sprite2D" parent="Table"]
+modulate = Color(0.529412, 0.321569, 0.156863, 1)
+position = Vector2(266, 122)
+scale = Vector2(267, 123)
+texture = ExtResource("2_2rncu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+position = Vector2(266, 121.5)
+shape = SubResource("RectangleShape2D_2cmwi")
+
+[node name="TestNegotiator" type="StaticBody2D" parent="."]
+position = Vector2(1093, 1377)
+script = ExtResource("5_afgmv")
+npc_name = 1
+npc_texture = ExtResource("6_51i6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator"]
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
+
+[node name="DialogueArea" type="Area2D" parent="TestNegotiator"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestNegotiator2" type="StaticBody2D" parent="."]
+position = Vector2(1268, 1375)
+script = ExtResource("5_afgmv")
+npc_texture = ExtResource("8_1bh20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator2"]
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
+
+[node name="DialogueArea" type="Area2D" parent="TestNegotiator2"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator2/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestNegotiator3" type="StaticBody2D" parent="."]
+position = Vector2(1462, 1373)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNegotiator3"]
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
+
+[node name="DialogueArea" type="Area2D" parent="TestNegotiator3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNegotiator3/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="Fridge" type="StaticBody2D" parent="."]
+position = Vector2(1657, 680)
+scale = Vector2(0.4, 0.925)
+script = ExtResource("9_k2q66")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fridge"]
+modulate = Color(0.321569, 0.384314, 0.466667, 1)
+position = Vector2(266, 122)
+scale = Vector2(267, 123)
+texture = ExtResource("2_2rncu")
+script = ExtResource("10_r5lkx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge"]
+position = Vector2(266, 121.5)
+shape = SubResource("RectangleShape2D_2cmwi")
+
+[node name="DoorOpenArea" type="Area2D" parent="Fridge"]
+position = Vector2(-52.6511, 121.396)
+scale = Vector2(-0.895326, 0.748122)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge/DoorOpenArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="Counter1" type="StaticBody2D" parent="."]
+position = Vector2(1065, 919)
+scale = Vector2(1.5191, 0.496256)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter1"]
+modulate = Color(0.529412, 0.321569, 0.156863, 1)
+position = Vector2(266, 122)
+scale = Vector2(267, 123)
+texture = ExtResource("2_2rncu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Counter1"]
+position = Vector2(266, 121.5)
+shape = SubResource("RectangleShape2D_2cmwi")
+
+[node name="Couldron" type="StaticBody2D" parent="."]
+position = Vector2(285, 141)
+
+[node name="Sprite2D" type="Sprite2D" parent="Couldron"]
+modulate = Color(0.321569, 0.384314, 0.466667, 1)
+scale = Vector2(90.9973, 93.2699)
+texture = ExtResource("2_2rncu")
+script = ExtResource("10_r5lkx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron"]
+shape = SubResource("RectangleShape2D_vcwyc")
+
+[node name="StirArea" type="Area2D" parent="Couldron"]
+position = Vector2(2, 112)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Couldron/StirArea"]
+shape = SubResource("CircleShape2D_x38ga")
+
+[node name="Counter2" type="StaticBody2D" parent="."]
+position = Vector2(706, 50)
+scale = Vector2(2.18702, 0.496256)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter2"]
+modulate = Color(0.529412, 0.321569, 0.156863, 1)
+position = Vector2(266, 122)
+scale = Vector2(267, 123)
+texture = ExtResource("2_2rncu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Counter2"]
+position = Vector2(266, 121.5)
+shape = SubResource("RectangleShape2D_2cmwi")
+
+[node name="Stove1" type="StaticBody2D" parent="."]
+position = Vector2(1657, 357)
+scale = Vector2(0.408375, 1.13284)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stove1"]
+modulate = Color(0.321569, 0.384314, 0.466667, 1)
+position = Vector2(266, 122)
+scale = Vector2(267, 123)
+texture = ExtResource("2_2rncu")
+script = ExtResource("10_r5lkx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove1"]
+position = Vector2(266, 121.5)
+shape = SubResource("RectangleShape2D_2cmwi")
+
+[node name="DoorOpenArea" type="Area2D" parent="Stove1"]
+position = Vector2(-52.6511, 121.396)
+scale = Vector2(-0.895326, 0.748122)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove1/DoorOpenArea"]
+scale = Vector2(0.754036, 1.1671)
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestChef1" type="StaticBody2D" parent="."]
+position = Vector2(1592, 571)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef1"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestChef1"]
+scale = Vector2(0.14501, 0.131079)
+texture = ExtResource("10_4bysy")
+script = ExtResource("7_rasr7")
+
+[node name="DialogueArea" type="Area2D" parent="TestChef1"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef1/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestChef2" type="StaticBody2D" parent="."]
+position = Vector2(450, 146)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef2"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestChef2"]
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
+
+[node name="DialogueArea" type="Area2D" parent="TestChef2"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef2/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="TestChef3" type="StaticBody2D" parent="."]
+position = Vector2(1093, 240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef3"]
+shape = SubResource("CircleShape2D_qid7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestChef3"]
+texture = ExtResource("4_76lv5")
+script = ExtResource("7_rasr7")
+
+[node name="DialogueArea" type="Area2D" parent="TestChef3"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestChef3/DialogueArea"]
+shape = SubResource("CircleShape2D_lgx8n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="DialogueBackground" type="Panel" parent="CanvasLayer" groups=["Dialogue"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4aft")
+script = ExtResource("9_skd70")
+
+[node name="PlayerContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = -960.0
+offset_bottom = -1080.0
+
+[node name="PlayerTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/PlayerContainer"]
+layout_mode = 0
+offset_top = 476.0
+offset_right = 602.0
+offset_bottom = 1153.0
+texture = ExtResource("10_2icuy")
+
+[node name="NPCContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+
+[node name="NPCTexture" type="TextureRect" parent="CanvasLayer/DialogueBackground/NPCContainer"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1260.0
+offset_top = 399.0
+offset_right = 2078.0
+offset_bottom = 1196.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("8_1bh20")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="DialogueContainer" type="Control" parent="CanvasLayer/DialogueBackground"]
+anchors_preset = 0
+
+[node name="Dialogue" type="Panel" parent="CanvasLayer/DialogueBackground/DialogueContainer"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 480.0
+offset_top = 770.0
+offset_right = 1440.0
+offset_bottom = 1070.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(500, 150)
+
+[node name="Content" type="RichTextLabel" parent="CanvasLayer/DialogueBackground/DialogueContainer/Dialogue"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+scroll_active = false
+scroll_following = true
+
+[node name="Name" type="Panel" parent="CanvasLayer/DialogueBackground/DialogueContainer"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 806.0
+offset_top = 714.0
+offset_right = 1106.0
+offset_bottom = 764.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/DialogueBackground/DialogueContainer/Name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "This is a bug"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="MinigameLayer" type="CanvasLayer" parent="."]
+script = ExtResource("14_rjkqa")
+
+[node name="MinigameBackground" type="PanelContainer" parent="MinigameLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 100.0
+offset_right = -770.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MinigameContainer" type="Control" parent="MinigameLayer/MinigameBackground"]
+layout_mode = 2
+
+[node name="Minigame" type="Panel" parent="MinigameLayer/MinigameBackground/MinigameContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="MinigameLayer/MinigameBackground/MinigameContainer/Minigame"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Make Even Slices!"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[connection signal="area_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
+[connection signal="body_exited" from="Rooms/Kitchen/KitchenArea" to="Camera2D" method="_on_kitchen_area_exited"]
+[connection signal="area_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
+[connection signal="body_exited" from="Rooms/Other/OtherArea" to="Camera2D" method="_on_other_area_exited"]
+[connection signal="area_entered" from="Player/PlayerArea" to="Player" method="_on_player_area_entered"]
+[connection signal="area_exited" from="Player/PlayerArea" to="Player" method="_on_player_area_exited"]
+[connection signal="body_entered" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestNegotiator/DialogueArea" to="TestNegotiator/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestNegotiator2/DialogueArea" to="TestNegotiator2/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestNegotiator2/DialogueArea" to="TestNegotiator2/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestNegotiator3/DialogueArea" to="TestNegotiator3/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestNegotiator3/DialogueArea" to="TestNegotiator3/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="Fridge/DoorOpenArea" to="Fridge/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Fridge/DoorOpenArea" to="Fridge/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="Couldron/StirArea" to="Couldron/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Couldron/StirArea" to="Couldron/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="Stove1/DoorOpenArea" to="Stove1/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="Stove1/DoorOpenArea" to="Stove1/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestChef1/DialogueArea" to="TestChef1/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestChef1/DialogueArea" to="TestChef1/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestChef2/DialogueArea" to="TestChef2/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestChef2/DialogueArea" to="TestChef2/Sprite2D" method="_on_dialogue_area_body_exited"]
+[connection signal="body_entered" from="TestChef3/DialogueArea" to="TestChef3/Sprite2D" method="_on_dialogue_area_body_entered"]
+[connection signal="body_exited" from="TestChef3/DialogueArea" to="TestChef3/Sprite2D" method="_on_dialogue_area_body_exited"]

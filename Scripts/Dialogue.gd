@@ -48,6 +48,8 @@ func show_dialogue(npc_texture, npc_name):
 	image_target_position = Vector2.ZERO
 	dialogue_opacity = Color.WHITE
 	npc_texture_node.texture = npc_texture
+	npc_texture_node.size.x = get_viewport().size.x * 0.33 
+	npc_texture_node.size.y = get_viewport().size.y * 0.33
 	await get_tree().create_timer(0.2).timeout
 	is_visible = true
 	dialogue_content = Data.dialogue[npc_name][Data.current_cycle][Data.current_reputation][0]
